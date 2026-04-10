@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Editorial Hotel Booking Concept</title>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* ABSOLUTE SCALING ENGINE - 3 TIER SYSTEM */
+    :root, html {
+      font-size: 16px !important; 
+    }
+
+    /* Fluid Tier: 769px to 1600px (1vw = 16px at 1600px) */
+    @media (min-width: 769px) and (max-width: 1600px) {
+      :root, html { 
+        font-size: 1vw !important; 
+      }
+    }
+
+    /* Ceiling Tier: 1601px+ (Lock at 16px base to cap content at 1600px) */
+    @media (min-width: 1601px) {
+      :root, html { 
+        font-size: 16px !important; 
+      }
+    }
+    
+    /* Mobile Tier: 768px- (Reset to standard 16px) */
+    @media (max-width: 768px) {
+      :root, html { 
+        font-size: 16px !important; 
+      }
+    }
+
+    /* Editorial UI Helpers */
+    .vertical-rl { writing-mode: vertical-rl; }
+    .hide-scrollbar::-webkit-scrollbar { display: none; }
+    .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    
+    /* BULLETPROOF MARQUEE CSS */
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
+    }
+    .marquee-container {
+      display: flex;
+      width: 100%;
+      overflow: hidden;
+      white-space: nowrap;
+      position: relative;
+    }
+    .marquee-track {
+      display: flex;
+      flex-shrink: 0;
+      align-items: center;
+      animation: marquee 25s linear infinite;
+    }
+    .marquee-item {
+      font-size: 8rem; 
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: -0.05rem;
+      line-height: 1;
+      white-space: nowrap;
+      padding: 0 1.5rem;
+    }
+    .marquee-star {
+      font-size: 4rem;
+      color: #111111;
+      padding: 0 1.5rem;
+      display: inline-block;
+    }
+    .text-outline {
+      color: transparent;
+      -webkit-text-stroke: 0.0625rem #D1D5DB;
+    }
+  </style>
+<style id="gl-editor-styles">
+.thumb-visible {
+  overflow-x: visible !important; overflow-y: visible !important;
+}
+</style>
+</head>
+<body class="bg-[#FAFAFA] text-[#000000] font-sans antialiased selection:bg-[#000000] selection:text-[#FFFFFF] m-0 p-0 overflow-x-hidden">
+
+  <!-- GLOBAL WRAPPER -->
+  <main class="w-full min-h-screen flex flex-col relative bg-[#FAFAFA]">
+    
+    <!-- HEADER (Spine-Aligned within Full Width) -->
+    <header class="absolute top-0 left-0 w-full z-40 pointer-events-none">
+      <div class="max-w-[100rem] mx-auto flex justify-between items-center p-[1.5rem] md:p-[3rem] pointer-events-auto reveal-on-scroll">
+        <div class="text-[0.875rem] font-black tracking-[-0.05rem] uppercase cursor-pointer text-[#000000]">
+          Vogue<br/>Estates
+        </div>
+        <button class="flex items-center gap-[0.75rem] hover:opacity-70 transition-opacity text-[#000000]">
+          <span class="text-[0.75rem] font-bold tracking-[0.1rem] uppercase hidden sm:block">Menu</span>
+          <div class="w-[2.5rem] h-[2.5rem] border-[0.0625rem] border-[#000000] rounded-full flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+          </div>
+        </button>
+      </div>
+    </header>
+
+    <!-- HERO SECTION (Full Bleed Backgrounds) -->
+    <section class="relative w-full min-h-screen flex flex-col md:block overflow-hidden bg-white">
+      <!-- Background Text (Spine-Relative) -->
+      <div class="absolute inset-0 pointer-events-none z-0">
+        <div class="max-w-[100rem] mx-auto h-full relative">
+          <div class="absolute top-[15%] left-[-5%] text-[15rem] font-black tracking-[-0.5rem] uppercase text-[#F9FAFB] select-none leading-none reveal-on-scroll" data-delay="0.3s">
+            RETREAT
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Content (Spine-Aligned) -->
+      <div class="relative z-10 max-w-[100rem] mx-auto h-full flex flex-col md:flex-row">
+        
+        <!-- Left Content -->
+        <div class="w-full md:w-[60%] flex flex-col justify-center px-[1.5rem] md:pl-[8rem] md:pr-[6rem] py-[3rem] md:min-h-screen relative">
+          <div class="hidden md:flex absolute left-[2rem] xl:left-[3rem] top-1/2 -translate-y-1/2 flex-col items-center gap-[1.5rem] reveal-on-scroll">
+            <span class="text-[0.625rem] font-bold tracking-[0.2rem] uppercase vertical-rl rotate-180 text-[#9CA3AF]">Scroll Down</span>
+            <div class="w-[0.0625rem] h-[6rem] bg-[#D1D5DB]"></div>
+          </div>
+
+          <div class="space-y-[2rem] max-w-[40rem] mt-[3rem] md:mt-0">
+            <h1 class="text-[3.5rem] md:text-[4.5rem] lg:text-[5.5rem] font-black tracking-[-0.2rem] uppercase leading-[0.9] text-[#111111] break-words whitespace-normal reveal-on-scroll">
+              Looking for an<br />
+              <span class="font-serif text-[#9CA3AF] italic tracking-normal lowercase">authentic</span><br />
+              Experience.
+            </h1>
+            
+            <div class="flex flex-wrap gap-[0.75rem] reveal-on-scroll" data-delay="0.1s">
+              <span class="px-[1rem] py-[0.375rem] rounded-full text-[0.625rem] font-bold tracking-[0.1rem] uppercase border-[0.0625rem] border-[#000000] bg-transparent text-[#000000]">Office</span>
+              <span class="px-[1rem] py-[0.375rem] rounded-full text-[0.625rem] font-bold tracking-[0.1rem] uppercase border-[0.0625rem] border-[#000000] bg-transparent text-[#000000]">5 Pools</span>
+              <span class="px-[1rem] py-[0.375rem] rounded-full text-[0.625rem] font-bold tracking-[0.1rem] uppercase border-[0.0625rem] border-[#000000] bg-[#000000] text-[#FFFFFF]">5 Star</span>
+            </div>
+
+            <p class="text-[0.875rem] md:text-[1rem] font-medium leading-relaxed max-w-[25rem] text-[#4B5563] reveal-on-scroll" data-delay="0.2s">
+              Curated architectural stays for the discerning traveler. Discover spaces that inspire, challenge, and elevate your perspective.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right Visual -->
+        <div class="w-full md:w-[40%] relative h-[50vh] md:h-auto thumb-visible" data-reveal-type="scale" data-delay="0.3s">
+          <div class="absolute inset-0 w-full h-full">
+            <img src="Hotel2.webp" alt="" class="hero-layer absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-100 z-10" />
+            <img src="/assets/hero_2.jpg" alt="" class="hero-layer absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0 z-0" />
+            <img src="/assets/hero_3.jpg" alt="" class="hero-layer absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0 z-0" />
+            <img src="/assets/hero_4.jpg" alt="" class="hero-layer absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0 z-0" />
+          </div>
+          
+          <!-- Staggered Floating Thumbnails -->
+          <div class="absolute left-[1.5rem] md:-left-[4.5rem] top-1/2 -translate-y-1/2 flex flex-col gap-[1.25rem] z-30">
+            <div class="hero-thumb group w-[5.5rem] h-[7.5rem] md:w-[8rem] md:h-[11rem] bg-[#FFFFFF] p-[0.375rem] shadow-[0_1.25rem_3.125rem_rgba(0,0,0,0.15)] cursor-pointer reveal-on-scroll" data-delay="0.4s">
+              <div class="w-full h-full overflow-hidden border-[0.0625rem] border-black/5">
+                <img src="/assets/hero_thumb_1.jpg" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" alt="" />
+              </div>
+            </div>
+            <div class="hero-thumb group w-[5.5rem] h-[7.5rem] md:w-[8rem] md:h-[11rem] bg-[#FFFFFF] p-[0.375rem] shadow-[0_1.25rem_3.125rem_rgba(0,0,0,0.15)] cursor-pointer reveal-on-scroll" data-delay="0.5s">
+              <div class="w-full h-full overflow-hidden border-[0.0625rem] border-black/5">
+                <img src="/assets/hero_thumb_2.jpg" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" alt="" />
+              </div>
+            </div>
+            <div class="hero-thumb group w-[5.5rem] h-[7.5rem] md:w-[8rem] md:h-[11rem] bg-[#FFFFFF] p-[0.375rem] shadow-[0_1.25rem_3.125rem_rgba(0,0,0,0.15)] cursor-pointer reveal-on-scroll" data-delay="0.6s">
+              <div class="w-full h-full overflow-hidden border-[0.0625rem] border-black/5">
+                <img src="/assets/hero_thumb_3.jpg" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" alt="" />
+              </div>
+            </div>
+            <div class="hero-thumb group w-[5.5rem] h-[7.5rem] md:w-[8rem] md:h-[11rem] bg-[#FFFFFF] p-[0.375rem] shadow-[0_1.25rem_3.125rem_rgba(0,0,0,0.15)] cursor-pointer reveal-on-scroll" data-delay="0.7s">
+              <div class="w-full h-full overflow-hidden border-[0.0625rem] border-black/5">
+                <img src="/assets/hero_thumb_4.jpg" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BRAND MANIFESTO (Full Width Background Bleed) -->
+    <section class="w-full py-[6rem] md:py-[10rem] bg-[#EBE9E4] border-y-[0.0625rem] border-[#000000]/10">
+       <div class="max-w-[100rem] mx-auto px-[1.5rem] md:px-[3rem] flex flex-col md:flex-row gap-[6rem] items-start">
+         <div class="w-full md:w-3/5">
+            <span class="text-[0.65rem] font-bold tracking-[0.2rem] uppercase mb-[2rem] block reveal-on-scroll">The Ethos</span>
+            <h2 class="font-serif text-[2.25rem] md:text-[4rem] leading-[1.1] text-[#111111] reveal-on-scroll" data-delay="0.1s">
+              We curate spaces that speak in whispers, not shouts. An architectural dialogue.
+            </h2>
+         </div>
+         <div class="w-full md:w-2/5 flex flex-col gap-[4rem] md:mt-[8rem]">
+            <div class="border-t-[0.0625rem] border-[#000000]/20 pt-[1.5rem] reveal-on-scroll" data-delay="0.2s">
+              <span class="text-[0.65rem] font-bold uppercase block mb-[0.5rem]">01 Architecture</span>
+              <p class="text-[0.875rem] leading-relaxed">Raw concrete meets natural light. Geometric forms committed to structural honesty.</p>
+            </div>
+            <div class="border-t-[0.0625rem] border-[#000000]/20 pt-[1.5rem] reveal-on-scroll" data-delay="0.3s">
+              <span class="text-[0.65rem] font-bold uppercase block mb-[0.5rem]">02 Experience</span>
+              <p class="text-[0.875rem] leading-relaxed">Silent luxury found in the weight of a linen sheet and the acoustic perfection of isolation.</p>
+            </div>
+         </div>
+       </div>
+    </section>
+
+    <!-- CURATED SELECTION (Full Width Base, 1600px Content Spine) -->
+    <section class="w-full py-[6rem] md:py-[12rem] bg-white">
+      <div class="max-w-[100rem] mx-auto px-[1.5rem] md:px-[3rem]">
+        <div class="flex justify-between items-end mb-[6rem] reveal-on-scroll">
+          <h2 class="text-[0.875rem] font-bold tracking-[0.1rem] uppercase">Curated Selection</h2>
+        </div>
+
+        <div class="flex flex-col md:flex-row gap-[3rem] md:gap-0 relative">
+          <div class="w-full md:w-1/2 flex flex-col justify-center">
+            
+            <div class="hotel-item group border-b-[0.0625rem] border-[#000000]/10 py-[3rem] cursor-pointer hover:border-[#000000] transition-colors reveal-on-scroll" data-id="01" data-location="GENEVA, CH" data-delay="0.0s">
+              <div class="flex items-center gap-[2rem]">
+                <span class="hotel-number text-[0.875rem] font-bold text-black transition-colors">01/</span>
+                <h3 class="hotel-title text-[2.5rem] md:text-[4rem] xl:text-[5rem] font-black uppercase transition-all duration-500 scale-105 text-black">SWISS HOTEL</h3>
+              </div>
+            </div>
+            
+            <div class="hotel-item group border-b-[0.0625rem] border-[#000000]/10 py-[3rem] cursor-pointer hover:border-[#000000] transition-colors reveal-on-scroll" data-id="02" data-location="TUSCANY, IT" data-delay="0.1s">
+              <div class="flex items-center gap-[2rem]">
+                <span class="hotel-number text-[0.875rem] font-bold text-[#D1D5DB] transition-colors">02/</span>
+                <h3 class="hotel-title text-[2.5rem] md:text-[4rem] xl:text-[5rem] font-black uppercase transition-all duration-500 text-[#D1D5DB]">VILLA NOIR</h3>
+              </div>
+            </div>
+            
+            <div class="hotel-item group border-b-[0.0625rem] border-[#000000]/10 py-[3rem] cursor-pointer hover:border-[#000000] transition-colors reveal-on-scroll" data-id="03" data-location="BERLIN, DE" data-delay="0.2s">
+              <div class="flex items-center gap-[2rem]">
+                <span class="hotel-number text-[0.875rem] font-bold text-[#D1D5DB] transition-colors">03/</span>
+                <h3 class="hotel-title text-[2.5rem] md:text-[4rem] xl:text-[5rem] font-black uppercase transition-all duration-500 text-[#D1D5DB]">THE CONCRETE</h3>
+              </div>
+            </div>
+            
+            <div class="hotel-item group border-b-[0.0625rem] border-[#000000]/10 py-[3rem] cursor-pointer hover:border-[#000000] transition-colors reveal-on-scroll" data-id="04" data-location="KYOTO, JP" data-delay="0.3s">
+              <div class="flex items-center gap-[2rem]">
+                <span class="hotel-number text-[0.875rem] font-bold text-[#D1D5DB] transition-colors">04/</span>
+                <h3 class="hotel-title text-[2.5rem] md:text-[4rem] xl:text-[5rem] font-black uppercase transition-all duration-500 text-[#D1D5DB]">LUMEN RESORT</h3>
+              </div>
+            </div>
+            
+          </div>
+
+          <!-- Image Preview -->
+          <div class="w-full md:w-1/2 md:pl-[3rem] h-[60vh] md:h-[80vh] flex items-center justify-center relative reveal-on-scroll" data-reveal-type="scale" data-delay="0.2s">
+             <div class="w-[85%] max-w-[32rem] aspect-[3/4] relative overflow-hidden bg-[#F3F4F6] shadow-[0_1.25rem_3.125rem_rgba(0,0,0,0.05)]">
+                <img id="img-01" src="/assets/hotel_1.jpg" alt="" class="hotel-image absolute inset-0 w-full h-full object-cover transition-all duration-1000 opacity-100 scale-100 z-10" />
+                <img id="img-02" src="/assets/hotel_2.jpg" alt="" class="hotel-image absolute inset-0 w-full h-full object-cover transition-all duration-1000 opacity-0 scale-110 z-0" />
+                <img id="img-03" src="/assets/hotel_3.jpg" alt="" class="hotel-image absolute inset-0 w-full h-full object-cover transition-all duration-1000 opacity-0 scale-110 z-0" />
+                <img id="img-04" src="/assets/hotel_4.jpg" alt="" class="hotel-image absolute inset-0 w-full h-full object-cover transition-all duration-1000 opacity-0 scale-110 z-0" />
+             </div>
+             <div class="absolute left-[1rem] md:left-[3rem] bottom-[2rem] bg-[#FFFFFF] p-[1.5rem] shadow-[0_0.625rem_1.25rem_rgba(0,0,0,0.05)] z-20 max-w-[15rem]">
+                <p class="text-[0.875rem] font-medium leading-relaxed">
+                  Architecture in <span id="caption-location" class="font-bold">GENEVA, CH</span>.
+                </p>
+             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MARQUEE (Full Bleed Edge-to-Edge) -->
+    <section class="w-full py-[4rem] md:py-[6rem] bg-white border-y-[0.0625rem] border-[#000000]/5 overflow-hidden">
+      <div class="marquee-container">
+        <div class="marquee-track">
+          <span class="marquee-item text-outline">Curated Isolation</span>
+          <span class="marquee-star">✦</span>
+          <span class="marquee-item text-[#111111]">Unseen Details</span>
+          <span class="marquee-star">✦</span>
+          <span class="marquee-item text-outline">Curated Isolation</span>
+          <span class="marquee-star">✦</span>
+        </div>
+        <div class="marquee-track" aria-hidden="true">
+          <span class="marquee-item text-outline">Curated Isolation</span>
+          <span class="marquee-star">✦</span>
+          <span class="marquee-item text-[#111111]">Unseen Details</span>
+          <span class="marquee-star">✦</span>
+          <span class="marquee-item text-outline">Curated Isolation</span>
+          <span class="marquee-star">✦</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- CINEMATIC (Full Bleed Video) -->
+    <section class="w-full bg-white pt-[6rem]">
+      <div class="max-w-[100rem] mx-auto px-[1.5rem] md:px-[3rem] mb-[3rem]">
+        <div class="flex flex-col md:flex-row justify-between items-end gap-[1.5rem] reveal-on-scroll">
+           <h2 class="font-serif text-[1.5rem] md:text-[2.5rem] leading-[1.1] italic">The Architecture of Silence</h2>
+           <span class="text-[0.65rem] font-bold uppercase border-[0.0625rem] border-[#000000] px-[0.75rem] py-[0.25rem] rounded-full">4K / Sound On</span>
+        </div>
+      </div>
+      
+      <div id="cinematic-container" class="w-full aspect-[16/9] md:aspect-[21/9] bg-[#111111] relative overflow-hidden reveal-on-scroll" data-reveal-type="scale">
+        <video id="cinematic-video" class="w-full h-full object-cover transition-all duration-[2s] opacity-50" muted playsinline loop poster="/assets/cinematic_poster.jpg">
+          <source src="/assets/cinematic_video.mp4" type="video/mp4" />
+        </video>
+        <div id="cinematic-top" class="absolute top-0 left-0 w-full h-[15%] bg-[#000000] z-10 transition-transform duration-[1.5s]"></div>
+        <div id="cinematic-bottom" class="absolute bottom-0 left-0 w-full h-[15%] bg-[#000000] z-10 transition-transform duration-[1.5s]"></div>
+      </div>
+    </section>
+
+    <!-- JOURNAL (Full Bleed Background) -->
+    <section class="w-full py-[6rem] md:py-[12rem] bg-[#FAFAFA]">
+      <div class="max-w-[100rem] mx-auto px-[1.5rem] md:px-[3rem]">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-[6rem]">
+           <article class="reveal-on-scroll">
+              <div class="w-full aspect-[4/5] md:aspect-[3/4] overflow-hidden mb-[2rem]">
+                <img src="/assets/journal_1.jpg" class="w-full h-full object-cover" alt="" />
+              </div>
+              <h4 class="font-serif text-[1.75rem] md:text-[2.5rem] leading-[1.1] mb-[1rem]">Mastering Concrete Minimalism</h4>
+              <div class="w-[3rem] h-[0.0625rem] bg-[#000000]"></div>
+           </article>
+           <article class="md:mt-[12rem] reveal-on-scroll" data-delay="0.2s">
+              <div class="w-full aspect-square overflow-hidden mb-[2rem]">
+                <img src="/assets/journal_2.jpg" class="w-full h-full object-cover" alt="" />
+              </div>
+              <h4 class="font-serif text-[1.75rem] md:text-[2.5rem] leading-[1.1] mb-[1rem]">Psychology of Negative Space</h4>
+              <div class="w-[3rem] h-[0.0625rem] bg-[#000000]"></div>
+           </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER (Enhanced Editorial Layout) -->
+    <footer class="w-full bg-[#000000] text-[#FFFFFF] pt-[8rem] pb-[2.5rem] relative overflow-hidden">
+      <!-- Top Floor: Newsletter & Tagline -->
+      <div class="max-w-[100rem] mx-auto px-[1.5rem] md:px-[3rem] pb-[5rem] flex flex-col md:flex-row justify-between items-start md:items-end gap-[4rem] reveal-on-scroll">
+        <div class="w-full md:w-auto">
+          <h4 class="text-[2.5rem] md:text-[4rem] font-black uppercase tracking-[-0.15rem] leading-[1] mb-[2rem]">Subscribe<br/>to the edit.</h4>
+          <div class="flex items-center border-b-[0.0625rem] border-white/30 pb-[0.5rem] w-full md:w-[25rem]">
+            <input type="email" placeholder="EMAIL ADDRESS" class="bg-transparent border-none outline-none text-[0.75rem] uppercase font-bold tracking-[0.1rem] w-full text-white placeholder:text-white/30" />
+            <button class="text-[0.75rem] font-bold uppercase tracking-[0.1rem] hover:text-[#9CA3AF] transition-colors">Submit</button>
+          </div>
+        </div>
+        <div class="max-w-[18rem]">
+          <p class="text-[0.875rem] text-[#9CA3AF] leading-relaxed font-medium">
+            Operating in the world's most silent spaces. Curated architectural isolation for the discerning traveler.
+          </p>
+        </div>
+      </div>
+
+      <!-- Middle Floor: Expanded Directory -->
+      <div class="border-t-[0.0625rem] border-white/10 w-full">
+        <div class="max-w-[100rem] mx-auto px-[1.5rem] md:px-[3rem] py-[5rem]">
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-[4rem] md:gap-[2rem] reveal-on-scroll" data-delay="0.1s">
+            <!-- Destinations -->
+            <div class="space-y-[1.5rem]">
+              <h5 class="text-[0.625rem] font-bold tracking-[0.2rem] uppercase text-[#FFFFFF]/40">Destinations</h5>
+              <div class="flex flex-col gap-[1rem]">
+                <a href="#" class="text-[0.75rem] font-bold uppercase tracking-[0.05rem] text-[#FFFFFF]/80 hover:text-white transition-colors">Europe</a>
+                <a href="#" class="text-[0.75rem] font-bold uppercase tracking-[0.05rem] text-[#FFFFFF]/80 hover:text-white transition-colors">Asia</a>
+                <a href="#" class="text-[0.75rem] font-bold uppercase tracking-[0.05rem] text-[#FFFFFF]/80 hover:text-white transition-colors">Americas</a>
+              </div>
+            </div>
+            <!-- Editorial -->
+            <div class="space-y-[1.5rem]">
+              <h5 class="text-[0.625rem] font-bold tracking-[0.2rem] uppercase text-[#FFFFFF]/40">Editorial</h5>
+              <div class="flex flex-col gap-[1rem]">
+                <a href="#" class="text-[0.75rem] font-bold uppercase tracking-[0.05rem] text-[#FFFFFF]/80 hover:text-white transition-colors">The Journal</a>
+                <a href="#" class="text-[0.75rem] font-bold uppercase tracking-[0.05rem] text-[#FFFFFF]/80 hover:text-white transition-colors">Architecture</a>
+                <a href="#" class="text-[0.75rem] font-bold uppercase tracking-[0.05rem] text-[#FFFFFF]/80 hover:text-white transition-colors">Interviews</a>
+                <a href="#" class="text-[0.75rem] font-bold uppercase tracking-[0.05rem] text-[#FFFFFF]/80 hover:text-white transition-colors">Archives</a>
+              </div>
+            </div>
+            <!-- Corporate -->
+            <div class="space-y-[1.5rem]">
+              <h5 class="text-[0.625rem] font-bold tracking-[0.2rem] uppercase text-[#FFFFFF]/40">Corporate</h5>
+              <div class="flex flex-col gap-[1rem]">
+                <a href="#" class="text-[0.75rem] font-bold uppercase tracking-[0.05rem] text-[#FFFFFF]/80 hover:text-white transition-colors">About Us</a>
+                <a href="#" class="text-[0.75rem] font-bold uppercase tracking-[0.05rem] text-[#FFFFFF]/80 hover:text-white transition-colors">Press</a>
+                <a href="#" class="text-[0.75rem] font-bold uppercase tracking-[0.05rem] text-[#FFFFFF]/80 hover:text-white transition-colors">Careers</a>
+                <a href="#" class="text-[0.75rem] font-bold uppercase tracking-[0.05rem] text-[#FFFFFF]/80 hover:text-white transition-colors">Contact</a>
+              </div>
+            </div>
+            <!-- Global HQ -->
+            <div class="space-y-[1.5rem]">
+              <h5 class="text-[0.625rem] font-bold tracking-[0.2rem] uppercase text-[#FFFFFF]/40">Global HQ</h5>
+              <div class="flex flex-col gap-[1rem]">
+                <span class="text-[0.75rem] font-bold uppercase tracking-[0.05rem] text-[#FFFFFF]/80 hover:text-white transition-colors cursor-default">London, UK</span>
+                <span class="text-[0.75rem] font-bold uppercase tracking-[0.05rem] text-[#FFFFFF]/80 hover:text-white transition-colors cursor-default">Geneva, CH</span>
+                <span class="text-[0.75rem] font-bold uppercase tracking-[0.05rem] text-[#FFFFFF]/80 hover:text-white transition-colors cursor-default">Kyoto, JP</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Floor: Colossal Watermark & Legal -->
+      <div class="border-t-[0.0625rem] border-white/10 w-full pt-[4rem] relative">
+        <div class="max-w-[100rem] mx-auto px-[1.5rem] md:px-[3rem] w-full">
+          
+          <!-- Colossal Anchor Text -->
+          <div class="w-full flex justify-center pb-[6rem] md:pb-[8rem] reveal-on-scroll" data-delay="0.2s">
+             <h2 class="font-serif text-[4rem] sm:text-[7rem] md:text-[10rem] lg:text-[13.5rem] leading-[0.85] text-[#FFFFFF]/5 tracking-tighter select-none flex flex-col items-center">
+               <span>VOGUE</span>
+               <span class="ml-[1em] md:ml-[2em] italic text-[#FFFFFF]/10">ESTATES</span>
+             </h2>
+          </div>
+
+          <!-- Legal Micro-Copy -->
+          <div class="w-full flex flex-col md:flex-row justify-between items-center gap-[1.5rem] absolute bottom-[1.5rem] md:bottom-[2.5rem] left-0 px-[1.5rem] md:px-[3rem] max-w-[100rem] right-0 mx-auto">
+            <span class="text-[0.625rem] font-bold tracking-[0.1rem] uppercase text-[#FFFFFF]/30">&copy; 2026 Vogue Estates. All Rights Reserved.</span>
+            <div class="flex gap-[2rem]">
+              <a href="#" class="text-[0.625rem] font-bold tracking-[0.1rem] uppercase text-[#FFFFFF]/30 hover:text-white transition-colors">Terms of Service</a>
+              <a href="#" class="text-[0.625rem] font-bold tracking-[0.1rem] uppercase text-[#FFFFFF]/30 hover:text-white transition-colors">Privacy Policy</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </footer>
+
+    <!-- FLOATING PILLS (Fixed center wrapper to prevent transform conflict) -->
+    <div class="fixed bottom-[2rem] left-0 w-full flex justify-center pointer-events-none z-[100]">
+      <div class="pointer-events-auto flex items-center gap-[0.5rem] bg-[#FFFFFF]/80 backdrop-blur-md p-[0.375rem] rounded-full border-[0.0625rem] border-[#E5E7EB] shadow-[0_1.25rem_3.125rem_rgba(0,0,0,0.05)] reveal-on-scroll" data-delay="0.5s">
+        <button class="bg-[#000000] text-[#FFFFFF] px-[1.5rem] py-[0.625rem] rounded-full text-[0.75rem] font-bold uppercase">Hotels</button>
+        <button class="bg-transparent text-[#000000] px-[1.5rem] py-[0.625rem] rounded-full text-[0.75rem] font-bold uppercase">Places</button>
+        <button id="open-search-btn" class="bg-transparent text-[#000000] p-[0.625rem] rounded-full hover:bg-[#F3F4F6]">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+        </button>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- SEARCH TAKEOVER -->
+  <div id="search-modal" class="fixed inset-0 z-[200] bg-[#111111] text-[#FFFFFF] flex flex-col items-center justify-center opacity-0 pointer-events-none transition-all duration-[1.2s] backdrop-blur-md">
+    <button id="close-search-btn" class="absolute top-[2rem] right-[2rem] md:top-[3rem] md:right-[3rem] flex items-center gap-[1rem] group cursor-pointer">
+      <span class="text-[0.75rem] font-bold uppercase text-[#FFFFFF] group-hover:text-[#9CA3AF] transition-colors">Close</span>
+      <div class="w-[3rem] h-[3rem] border-[0.0625rem] border-white/20 rounded-full flex items-center justify-center group-hover:border-white transition-colors">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </div>
+    </button>
+    <div class="w-full max-w-[75rem] px-[1.5rem] md:px-[3rem] text-center flex flex-col items-center">
+       <span class="text-[0.65rem] font-bold tracking-[0.2rem] uppercase text-[#9CA3AF] mb-[3rem] block">Define your parameters</span>
+       <h2 class="font-serif text-[2.5rem] md:text-[4rem] lg:text-[5rem] leading-[1.2] text-[#FFFFFF] break-words whitespace-normal font-medium">
+         I am looking for an escape to 
+         <button class="inline-block text-[#9CA3AF] italic border-b-[0.0625rem] border-[#9CA3AF] hover:text-[#FFFFFF] hover:border-[#FFFFFF] transition-colors mx-[0.5rem] cursor-pointer">Anywhere</button> 
+         from 
+         <button class="inline-block text-[#9CA3AF] italic border-b-[0.0625rem] border-[#9CA3AF] hover:text-[#FFFFFF] hover:border-[#FFFFFF] transition-colors mx-[0.5rem] cursor-pointer">Add Date</button> 
+         until 
+         <button class="inline-block text-[#9CA3AF] italic border-b-[0.0625rem] border-[#9CA3AF] hover:text-[#FFFFFF] hover:border-[#FFFFFF] transition-colors mx-[0.5rem] cursor-pointer">Add Date</button> 
+         for 
+         <button class="inline-block text-[#9CA3AF] italic border-b-[0.0625rem] border-[#9CA3AF] hover:text-[#FFFFFF] hover:border-[#FFFFFF] transition-colors mx-[0.5rem] cursor-pointer">2 Guests</button>.
+       </h2>
+       <button class="mt-[6rem] bg-[#FFFFFF] text-[#111111] px-[3rem] py-[1rem] rounded-full text-[0.875rem] font-bold uppercase hover:scale-105 hover:bg-[#F3F4F6] transition-all duration-500 shadow-[0_0_2.5rem_rgba(255,255,255,0.1)]">
+         Find Sanctuaries
+       </button>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+      // ====================================================================
+      // 1. GRACEFUL DEGRADATION SCROLL REVEAL (Webstudio Safe)
+      // Elements are fully visible in raw HTML. The script hides them 
+      // ONLY on execution, so if JS fails in a builder, they remain visible.
+      // ====================================================================
+      const revealElements = document.querySelectorAll('.reveal-on-scroll');
+      
+      // Hide elements dynamically
+      revealElements.forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = el.dataset.revealType === 'scale' ? 'scale(1.05)' : 'translateY(2.5rem)';
+        el.style.transition = 'opacity 1.2s cubic-bezier(0.19, 1, 0.22, 1), transform 1.2s cubic-bezier(0.19, 1, 0.22, 1)';
+        if (el.dataset.delay) el.style.transitionDelay = el.dataset.delay;
+      });
+
+      // Trigger function
+      const triggerReveal = (el) => {
+        el.style.opacity = '1';
+        el.style.transform = el.dataset.revealType === 'scale' ? 'scale(1)' : 'translateY(0)';
+        el.classList.remove('reveal-on-scroll');
+      };
+
+      // Engine A: Standard Browser Observer
+      if ('IntersectionObserver' in window) {
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              triggerReveal(entry.target);
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { root: null, rootMargin: '0px', threshold: 0.05 });
+        
+        revealElements.forEach(el => revealObserver.observe(el));
+      }
+
+      // Engine B: Webstudio/Iframe Capture-Phase Fallback
+      const fallbackRevealCheck = () => {
+        const elements = document.querySelectorAll('.reveal-on-scroll');
+        const triggerHeight = (window.innerHeight || document.documentElement.clientHeight) * 0.95;
+        
+        elements.forEach(el => {
+          const rect = el.getBoundingClientRect();
+          if (rect.top <= triggerHeight && rect.bottom >= 0) triggerReveal(el);
+        });
+      };
+
+      window.addEventListener('scroll', fallbackRevealCheck, true); 
+      window.addEventListener('resize', fallbackRevealCheck);
+      setTimeout(fallbackRevealCheck, 100); 
+      setTimeout(fallbackRevealCheck, 1000); 
+
+      // ====================================================================
+      // 2. INTERACTIVE EDITORIAL LOGIC
+      // ====================================================================
+
+      // Hero Thumbnails
+      const thumbs = document.querySelectorAll('.hero-thumb');
+      const layers = document.querySelectorAll('.hero-layer');
+      thumbs.forEach((t, i) => {
+        t.onmouseenter = () => {
+          layers.forEach((l, li) => { 
+            if(l) { l.style.opacity = li === i ? '1' : '0'; l.style.zIndex = li === i ? '10' : '0'; }
+          });
+        };
+      });
+
+      // Curated Selection Hover 
+      const items = document.querySelectorAll('.hotel-item');
+      const imgs = document.querySelectorAll('.hotel-image');
+      const cap = document.getElementById('caption-location');
+      items.forEach(it => {
+        it.onmouseenter = () => {
+          const id = it.dataset.id;
+          imgs.forEach(im => {
+            if(im) {
+              im.style.opacity = im.id === `img-${id}` ? '1' : '0';
+              im.style.transform = im.id === `img-${id}` ? 'scale(1)' : 'scale(1.1)';
+              im.style.zIndex = im.id === `img-${id}` ? '10' : '0';
+            }
+          });
+          items.forEach(el => {
+            const h3 = el.querySelector('.hotel-title');
+            const num = el.querySelector('.hotel-number');
+            if(h3) { h3.style.color = el === it ? '#000000' : '#D1D5DB'; h3.style.transform = el === it ? 'scale(1.05)' : 'scale(1)'; }
+            if(num) { num.style.color = el === it ? '#000000' : '#D1D5DB'; }
+          });
+          if(cap && it.dataset.location) cap.textContent = it.dataset.location;
+        };
+      });
+
+      // Cinematic Video Curtain Reveal (With Dual-Engine Fallback)
+      const cinCont = document.getElementById('cinematic-container');
+      const cinVid = document.getElementById('cinematic-video');
+      const topBar = document.getElementById('cinematic-top');
+      const bottomBar = document.getElementById('cinematic-bottom');
+      let videoTriggered = false;
+
+      const triggerVideo = () => {
+        if (videoTriggered) return;
+        videoTriggered = true;
+        if(topBar) topBar.style.transform = 'translateY(-100%)';
+        if(bottomBar) bottomBar.style.transform = 'translateY(100%)';
+        if(cinVid) { cinVid.style.opacity = '1'; cinVid.play().catch(()=>{}); }
+      };
+
+      if(cinCont) {
+        if ('IntersectionObserver' in window) {
+          new IntersectionObserver((entries, obs) => {
+            if (entries[0].isIntersecting) {
+              triggerVideo();
+              obs.unobserve(cinCont);
+            }
+          }, { threshold: 0.1 }).observe(cinCont);
+        }
+        window.addEventListener('scroll', () => {
+          if (!videoTriggered) {
+             const rect = cinCont.getBoundingClientRect();
+             if (rect.top <= window.innerHeight * 0.8 && rect.bottom >= 0) triggerVideo();
+          }
+        }, true);
+      }
+
+      // Search Takeover Modal
+      const sMod = document.getElementById('search-modal');
+      const openBtn = document.getElementById('open-search-btn');
+      const closeBtn = document.getElementById('close-search-btn');
+      if(openBtn && sMod && closeBtn) {
+        openBtn.onclick = () => { sMod.style.opacity = '1'; sMod.style.pointerEvents = 'auto'; document.body.style.overflow = 'hidden'; };
+        closeBtn.onclick = () => { sMod.style.opacity = '0'; sMod.style.pointerEvents = 'none'; document.body.style.overflow = ''; };
+      }
+    });
+  </script>
+</body>
+</html>
