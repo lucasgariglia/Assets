@@ -1,0 +1,20 @@
+<?xml version="1.0" standalone="no"?>
+<svg viewBox="0 0 1200 600" class="" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+        
+        <!-- Base styling for all ridges -->
+        <g fill="none" stroke="#D0C8C3" stroke-width="1.25" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4">
+          
+          <!-- Background Left Ridge -->
+          <path d="M -50,380 L 150,290 L 300,250"/>
+          
+          <!-- Front Intersecting Ridge -->
+          <path d="M -50,450 L 300,250 L 380,290 L 520,320 L 720,340 L 1000,450 L 1250,550"/>
+          
+          <!-- Middle Tallest Ridge -->
+          <path d="M 250,420 L 400,410 L 520,320 L 620,220 L 700,210 L 800,80 L 1150,280 L 1250,330"/>
+
+          <!-- Tiny geometric connection lines to simulate folds -->
+          <path d="M 620,220 L 700,210" stroke-width="0.75" opacity="0.6"/>
+        </g>
+
+      </svg>

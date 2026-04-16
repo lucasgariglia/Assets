@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Swiss Alps Retreat | Vogue Estates</title>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+
+/* VISUAL CSS EDITOR */
+    .md\:h-screen .h-full .overflow-hidden{
+ background-image:url("public/assets/Hero.webp") !important;
+}
+
+.min-h-screen .w-full .mix-blend-multiply{
+ background-image:url("public/assets/Mapsection.webp") !important;
+}
+
+
+    /* ABSOLUTE SCALING ENGINE - 3 TIER SYSTEM */
+    :root, html { font-size: 16px; }
+    @media (min-width: 769px) and (max-width: 1600px) { :root, html { font-size: 1vw !important; } }
+    @media (min-width: 1601px) { :root, html { font-size: 16px !important; } }
+    @media (max-width: 768px) { :root, html { font-size: 16px !important; } }
+
+    /* Editorial UI Helpers */
+    .vertical-rl { writing-mode: vertical-rl; }
+    .hide-scrollbar::-webkit-scrollbar { display: none; }
+    .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+  </style>
+<style id="gl-editor-styles">
+.asset-overflow {
+  background-image: url("Mapsection.webp");
+}
+</style>
+</head>
+<body class="bg-[#FAFAFA] text-[#000000] font-sans antialiased selection:bg-[#000000] selection:text-[#FFFFFF] m-0 p-0 overflow-x-hidden">
+
+  <main class="w-full min-h-screen flex flex-col relative bg-[#FAFAFA]">
+    
+    <!-- HEADER -->
+    <header class="absolute top-0 left-0 w-full z-[150] pointer-events-none">
+      <div class="max-w-[100rem] mx-auto flex justify-between items-start p-[1.5rem] md:p-[3rem] pointer-events-auto reveal-on-scroll">
+        <div class="flex items-start gap-[1rem] md:gap-[1.5rem]">
+          <!-- Geometric Globe Icon -->
+          <svg class="mt-[0.125rem] text-white" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="2" y1="12" x2="22" y2="12"></line>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+          </svg>
+          <a href="index.html" class="text-[0.875rem] font-black tracking-[-0.05rem] uppercase cursor-pointer text-white hover:opacity-70 transition-opacity">
+            Swiss Alps<br/>Retreat
+          </a>
+        </div>
+        
+        <button id="open-menu-btn" class="flex items-center gap-[1rem] hover:opacity-70 transition-opacity text-white group">
+          <span class="text-[0.75rem] font-bold tracking-[0.1rem] uppercase hidden sm:block">Menu</span>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="transition-transform duration-300 group-hover:translate-x-1">
+            <line x1="4" y1="9" x2="20" y2="9"></line>
+            <line x1="4" y1="15" x2="14" y2="15"></line>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- HERO COVER (Full Bleed) -->
+    <section class="relative w-full h-[85vh] md:h-screen bg-[#111111] overflow-hidden">
+      <div class="absolute inset-0 w-full h-full opacity-80">
+        <!-- Asset Wrapper (No Img Tags) -->
+        <div class="asset-wrapper w-full h-full relative" alt="Swiss Alps Retreat Cover">
+          <div class="asset-overflow w-full h-full overflow-hidden relative bg-cover bg-center" alt="Swiss Alps Retreat Cover" style="background-image: url('assets/master_hero_ciudad_maderas.webp');"></div>
+        </div>
+      </div>
+      <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/60"></div>
+      
+      <div class="relative z-10 max-w-[100rem] mx-auto h-full flex flex-col justify-end px-[1.5rem] md:px-[3rem] pb-[4rem] md:pb-[6rem]">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-[2rem]">
+          <div class="reveal-on-scroll" data-delay="0.3s">
+            <span class="text-[0.65rem] font-bold uppercase tracking-[0.3rem] text-white/70 block mb-[1.5rem]">01 / The Collection</span>
+            <h1 class="font-serif text-[4rem] md:text-[6rem] lg:text-[8rem] text-white italic leading-[0.9] tracking-tight mb-[1rem]">
+              Swiss Alps<br/>Retreat
+            </h1>
+            <p class="text-[1rem] text-white/80 font-medium uppercase tracking-[0.1rem]">Vals, Switzerland</p>
+          </div>
+          
+          <button class="w-[5rem] h-[5rem] md:w-[7rem] md:h-[7rem] rounded-full border-[0.0625rem] border-white/30 backdrop-blur-sm flex items-center justify-center hover:bg-white transition-colors duration-500 group reveal-on-scroll" data-delay="0.5s">
+            <svg class="w-[1.5rem] h-[1.5rem] lg:w-[2rem] lg:h-[2rem] ml-[0.5rem] fill-white group-hover:fill-black transition-colors" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- NARRATIVE & BOOKING SPLIT -->
+    <section class="w-full py-[6rem] md:py-[10rem] bg-[#FAFAFA] border-b-[0.0625rem] border-[#000000]/10">
+      <div class="max-w-[100rem] mx-auto px-[1.5rem] md:px-[3rem] flex flex-col md:flex-row gap-[4rem] lg:gap-[8rem]">
+        
+        <!-- Left: Sticky Booking Sidebar -->
+        <aside class="w-full md:w-[30%] lg:w-[25%] relative">
+          <div class="md:sticky md:top-[8rem] flex flex-col gap-[3rem] reveal-on-scroll">
+            <div class="space-y-[2rem]">
+              <h3 class="font-black text-[2rem] uppercase tracking-[-0.05rem] leading-[1]">Reserve<br/>The Space</h3>
+              <p class="text-[0.875rem] text-[#6B7280] leading-relaxed">Exclusive access to the brutalist sanctuary. Minimum two-night stay required.</p>
+            </div>
+            <form class="flex flex-col gap-[1.5rem]">
+              <div class="border-b-[0.5px] border-black/20 pb-[0.75rem]">
+                <label class="text-[0.625rem] font-bold uppercase tracking-[0.2rem] text-black/50 block mb-[0.5rem]">Check In - Check Out</label>
+                <input type="text" placeholder="Select Dates" class="w-full bg-transparent text-[1rem] font-medium outline-none placeholder:text-black" readonly />
+              </div>
+              <div class="border-b-[0.5px] border-black/20 pb-[0.75rem]">
+                <label class="text-[0.625rem] font-bold uppercase tracking-[0.2rem] text-black/50 block mb-[0.5rem]">Guests</label>
+                <select class="w-full bg-transparent text-[1rem] font-medium outline-none appearance-none cursor-pointer">
+                  <option>2 Adults</option>
+                  <option>1 Adult</option>
+                  <option>3 Adults</option>
+                  <option>4 Adults</option>
+                </select>
+              </div>
+              <div class="pt-[1rem] flex justify-between items-end">
+                <span class="text-[0.625rem] font-bold uppercase tracking-[0.2rem] text-black/50">From</span>
+                <span class="text-[1.5rem] font-black tracking-tight">€1,200 <span class="text-[0.875rem] font-medium text-black/50">/night</span></span>
+              </div>
+              <a href="booking.html?id=01" class="w-full bg-black text-white py-[1.25rem] rounded-none text-[0.75rem] font-bold uppercase tracking-[0.15rem] hover:bg-[#333333] transition-colors mt-[1rem] block text-center">
+                Check Availability
+              </a>
+            </form>
+            <div class="border-t-[0.5px] border-black/10 pt-[2rem] flex flex-col gap-[1rem]">
+              <a href="#" class="text-[0.75rem] font-bold uppercase tracking-[0.1rem] hover:opacity-50 transition-opacity flex justify-between"><span>View Floorplan</span> <span>→</span></a>
+              <a href="#" class="text-[0.75rem] font-bold uppercase tracking-[0.1rem] hover:opacity-50 transition-opacity flex justify-between"><span>Read FAQs</span> <span>→</span></a>
+            </div>
+          </div>
+        </aside>
+
+        <!-- Right: Editorial Narrative -->
+        <article class="w-full md:w-[70%] lg:w-[75%] flex flex-col gap-[6rem] md:gap-[10rem]">
+          <div class="max-w-[45rem] reveal-on-scroll" data-delay="0.2s">
+            <p class="text-[1.25rem] md:text-[1.75rem] leading-[1.6] text-[#111111] font-serif">
+              <span class="float-left text-[6rem] leading-[0.8] font-black mr-[1rem] text-black italic">C</span>
+              arved directly into the Alpine rock face, the Swiss Alps Retreat stands as a monument to raw material and absolute silence. Designed by Pritzker-winning architect Peter Zumthor, the property forces a dialogue between the harsh exterior environment and the meticulously curated warmth of its interior spaces.
+            </p>
+          </div>
+
+          <!-- Massive Editorial Image Frame (No Img Tags) -->
+          <div class="asset-wrapper w-full aspect-[4/3] md:aspect-[16/9] reveal-on-scroll relative group" data-reveal-type="scale" alt="Interior Architecture of Swiss Hotel">
+            <div class="asset-overflow absolute inset-0 w-full h-full overflow-hidden bg-[#EBE9E4] bg-cover bg-center transition-transform duration-1000 group-hover:scale-105" alt="Interior Architecture of Swiss Hotel" style="background-image: url('assets/Swisshotel.webp');">
+              <div class="absolute inset-0 pointer-events-none ring-[0.5px] ring-inset ring-black/10"></div>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-[4rem]">
+            <div class="reveal-on-scroll">
+              <h4 class="text-[0.875rem] font-bold uppercase tracking-[0.2rem] mb-[1.5rem]">The Concept</h4>
+              <p class="text-[1rem] leading-relaxed text-[#4B5563]">The design eliminates all unnecessary noise. There are no televisions, no clocks, and no distracting artworks. Instead, the focus is entirely on the shifting textures of quartzite, water, and mountain light as it enters through strategic geometric fissures.</p>
+            </div>
+            <div class="reveal-on-scroll" data-delay="0.2s">
+              <h4 class="text-[0.875rem] font-bold uppercase tracking-[0.2rem] mb-[1.5rem]">The Materials</h4>
+              <ul class="flex flex-col gap-[1rem] border-t-[0.5px] border-black/10">
+                <li class="border-b-[0.5px] border-black/10 py-[1rem] flex justify-between text-[0.875rem]">
+                  <span class="text-[#4B5563]">Structure</span>
+                  <span class="font-bold uppercase tracking-wider">Valser Quartzite</span>
+                </li>
+                <li class="border-b-[0.5px] border-black/10 py-[1rem] flex justify-between text-[0.875rem]">
+                  <span class="text-[#4B5563]">Furnishings</span>
+                  <span class="font-bold uppercase tracking-wider">Smoked Oak & Linen</span>
+                </li>
+                <li class="border-b-[0.5px] border-black/10 py-[1rem] flex justify-between text-[0.875rem]">
+                  <span class="text-[#4B5563]">Fixtures</span>
+                  <span class="font-bold uppercase tracking-wider">Brushed Brass</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="py-[4rem] border-y-[0.5px] border-black/10 reveal-on-scroll">
+            <h3 class="font-serif text-[2.5rem] md:text-[4rem] italic leading-[1.1] text-center max-w-[50rem] mx-auto text-[#111111]">
+              "Architecture is not about form, it is about the atmosphere it creates within the soul."
+            </h3>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- THE PARTICULARS -->
+    <section class="w-full py-[8rem] md:py-[12rem] bg-[#FAFAFA] border-b-[0.5px] border-[#000000]/10">
+      <div class="max-w-[100rem] mx-auto px-[1.5rem] md:px-[3rem]">
+        <div class="mb-[6rem] md:mb-[8rem] reveal-on-scroll">
+          <span class="text-[0.65rem] font-bold uppercase tracking-[0.3rem] text-black/50 block mb-[1rem]">02 / The Particulars</span>
+          <h2 class="font-serif text-[3rem] md:text-[5rem] italic leading-[1] text-[#111111]">Info & Amenities.</h2>
+        </div>
+        <div class="flex flex-col border-t-[0.5px] border-black/10">
+          <!-- Address -->
+          <div class="group flex flex-col md:flex-row md:items-center justify-between py-[2rem] md:py-[3rem] border-b-[0.5px] border-black/10 hover:px-[1.5rem] hover:bg-black/5 transition-all duration-500 reveal-on-scroll cursor-default">
+             <h4 class="text-[0.65rem] font-bold uppercase tracking-[0.2rem] text-black/50 group-hover:text-black w-full md:w-1/3 mb-[1rem] md:mb-0 transition-colors duration-500">Address</h4>
+             <div class="w-full md:w-2/3 flex justify-between items-center gap-[2rem]">
+                <p class="text-[1.125rem] md:text-[1.5rem] leading-relaxed text-[#111111] font-serif italic">Cor de Deister 4C, 6980 La Roche-en-Ardenne</p>
+                <span class="opacity-0 group-hover:opacity-100 transform -translate-x-[1rem] group-hover:translate-x-0 transition-all duration-500 text-[1.5rem] font-light">→</span>
+             </div>
+          </div>
+          <!-- Capacity -->
+          <div class="group flex flex-col md:flex-row md:items-center justify-between py-[2rem] md:py-[3rem] border-b-[0.5px] border-black/10 hover:px-[1.5rem] hover:bg-black/5 transition-all duration-500 reveal-on-scroll" data-delay="0.1s">
+             <h4 class="text-[0.65rem] font-bold uppercase tracking-[0.2rem] text-black/50 group-hover:text-black w-full md:w-1/3 mb-[1rem] md:mb-0 transition-colors duration-500">Capacity</h4>
+             <div class="w-full md:w-2/3 flex justify-between items-center gap-[2rem]">
+                <p class="text-[1.125rem] md:text-[1.5rem] leading-relaxed text-[#111111]">2 Adults + 2 Children <span class="text-black/40 text-[0.75rem] uppercase tracking-wider ml-[1rem] block md:inline mt-[0.5rem] md:mt-0 font-sans not-italic">No Pets</span></p>
+                <span class="opacity-0 group-hover:opacity-100 transform -translate-x-[1rem] group-hover:translate-x-0 transition-all duration-500 text-[1.5rem] font-light">→</span>
+             </div>
+          </div>
+          <!-- Wellness -->
+          <div class="group flex flex-col md:flex-row md:items-center justify-between py-[2rem] md:py-[3rem] border-b-[0.5px] border-black/10 hover:px-[1.5rem] hover:bg-black/5 transition-all duration-500 reveal-on-scroll" data-delay="0.1s">
+             <h4 class="text-[0.65rem] font-bold uppercase tracking-[0.2rem] text-black/50 group-hover:text-black w-full md:w-1/3 mb-[1rem] md:mb-0 transition-colors duration-500">Wellness</h4>
+             <div class="w-full md:w-2/3 flex justify-between items-center gap-[2rem]">
+                <p class="text-[1.125rem] md:text-[1.5rem] leading-relaxed text-[#111111] font-serif italic">Private terrace with sauna, outdoor shower & lounging area</p>
+                <span class="opacity-0 group-hover:opacity-100 transform -translate-x-[1rem] group-hover:translate-x-0 transition-all duration-500 text-[1.5rem] font-light">→</span>
+             </div>
+          </div>
+          <!-- Comfort -->
+          <div class="group flex flex-col md:flex-row md:items-center justify-between py-[2rem] md:py-[3rem] border-b-[0.5px] border-black/10 hover:px-[1.5rem] hover:bg-black/5 transition-all duration-500 reveal-on-scroll" data-delay="0.1s">
+             <h4 class="text-[0.65rem] font-bold uppercase tracking-[0.2rem] text-black/50 group-hover:text-black w-full md:w-1/3 mb-[1rem] md:mb-0 transition-colors duration-500">Comfort & Ambience</h4>
+             <div class="w-full md:w-2/3 flex justify-between items-center gap-[2rem]">
+                <p class="text-[1.125rem] md:text-[1.5rem] leading-relaxed text-[#111111]">Domotic heating, Bluetooth sound system, High-speed WiFi</p>
+                <span class="opacity-0 group-hover:opacity-100 transform -translate-x-[1rem] group-hover:translate-x-0 transition-all duration-500 text-[1.5rem] font-light">→</span>
+             </div>
+          </div>
+          <!-- Layout -->
+          <div class="group flex flex-col md:flex-row md:items-start justify-between py-[2rem] md:py-[3rem] border-b-[0.5px] border-black/10 hover:px-[1.5rem] hover:bg-black/5 transition-all duration-500 reveal-on-scroll" data-delay="0.1s">
+             <h4 class="text-[0.65rem] font-bold uppercase tracking-[0.2rem] text-black/50 group-hover:text-black w-full md:w-1/3 mb-[1rem] md:mb-0 mt-[0.5rem] transition-colors duration-500">Layout</h4>
+             <div class="w-full md:w-2/3 flex justify-between items-start gap-[2rem]">
+                <div class="flex flex-col gap-[1rem] w-full">
+                  <p class="text-[1.125rem] md:text-[1.5rem] leading-relaxed text-[#111111] font-serif italic border-b-[0.5px] border-black/5 pb-[1rem]">2 Queen size beds with premium linen</p>
+                  <p class="text-[1.125rem] md:text-[1.5rem] leading-relaxed text-[#111111] font-serif italic border-b-[0.5px] border-black/5 pb-[1rem]">Living room with sitting bench and dining table for four</p>
+                  <p class="text-[1.125rem] md:text-[1.5rem] leading-relaxed text-[#111111] font-serif italic border-b-[0.5px] border-black/5 pb-[1rem]">Fully equipped kitchen: induction stove, sink, dishwasher, oven, fridge</p>
+                  <p class="text-[1.125rem] md:text-[1.5rem] leading-relaxed text-[#111111] font-serif italic">Bathroom with shower, sink, toilet incl. bespoke toiletries</p>
+                </div>
+                <span class="opacity-0 group-hover:opacity-100 transform -translate-x-[1rem] group-hover:translate-x-0 transition-all duration-500 text-[1.5rem] font-light mt-[0.5rem]">→</span>
+             </div>
+          </div>
+          <!-- Logistics -->
+          <div class="group flex flex-col md:flex-row md:items-center justify-between py-[2rem] md:py-[3rem] border-b-[0.5px] border-black/10 hover:px-[1.5rem] hover:bg-black/5 transition-all duration-500 reveal-on-scroll" data-delay="0.1s">
+             <h4 class="text-[0.65rem] font-bold uppercase tracking-[0.2rem] text-black/50 group-hover:text-black w-full md:w-1/3 mb-[1rem] md:mb-0 transition-colors duration-500">Logistics</h4>
+             <div class="w-full md:w-2/3 flex justify-between items-center gap-[2rem]">
+                <p class="text-[1.125rem] md:text-[1.5rem] leading-relaxed text-[#111111]">Check-in 17:00 / Check-out 11:00 <span class="text-black/40 text-[0.75rem] uppercase tracking-wider ml-[1rem] block md:inline mt-[0.5rem] md:mt-0 font-sans">1 EV Parking Spot Included</span></p>
+                <span class="opacity-0 group-hover:opacity-100 transform -translate-x-[1rem] group-hover:translate-x-0 transition-all duration-500 text-[1.5rem] font-light">→</span>
+             </div>
+          </div>
+          <!-- Pricing -->
+          <div class="group flex flex-col md:flex-row md:items-center justify-between py-[2rem] md:py-[3rem] border-b-[0.5px] border-black/10 hover:px-[1.5rem] hover:bg-black/5 transition-all duration-500 reveal-on-scroll" data-delay="0.1s">
+             <h4 class="text-[0.65rem] font-bold uppercase tracking-[0.2rem] text-black/50 group-hover:text-black w-full md:w-1/3 mb-[1rem] md:mb-0 transition-colors duration-500">Pricing</h4>
+             <div class="w-full md:w-2/3 flex justify-between items-center gap-[2rem]">
+                <p class="text-[1.125rem] md:text-[1.5rem] leading-relaxed text-[#111111] font-serif italic">From 259 EUR per night <span class="text-black/40 text-[0.75rem] uppercase tracking-wider ml-[1rem] block md:inline mt-[0.5rem] md:mt-0 font-sans not-italic">Min. 2 Nights</span></p>
+                <span class="opacity-0 group-hover:opacity-100 transform -translate-x-[1rem] group-hover:translate-x-0 transition-all duration-500 text-[1.5rem] font-light">→</span>
+             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDITORIAL MAP LOCATION (No Img Tags) -->
+    <section class="w-full relative h-[100vh] md:h-[80vh] reveal-on-scroll" data-reveal-type="scale">
+      <div class="absolute inset-0 w-full h-full bg-[#EBE9E4]">
+        <div class="asset-wrapper w-full h-full relative" alt="Location Map">
+          <div class="asset-overflow w-full h-full overflow-hidden relative bg-cover bg-center grayscale contrast-125 opacity-30 mix-blend-multiply" alt="Location Map"></div>
+        </div>
+      </div>
+      <div class="absolute bottom-[2rem] md:bottom-[4rem] left-[1.5rem] md:left-[5rem] lg:left-[calc(50vw-47rem)] bg-white p-[2.5rem] md:p-[3.5rem] shadow-[0_2rem_5rem_rgba(0,0,0,0.05)] max-w-[28rem] z-10 reveal-on-scroll" data-delay="0.3s">
+        <span class="text-[0.625rem] font-bold uppercase tracking-[0.2rem] text-black/40 block mb-[1.5rem]">Location Data</span>
+        <h3 class="font-serif text-[2.5rem] leading-[1.1] mb-[1.5rem] text-[#111111]">Cor de Deister<br/>4C - F.</h3>
+        <p class="text-[0.875rem] text-[#6B7280] mb-[2.5rem] font-serif italic">6980 La Roche-en-Ardenne<br/>Switzerland</p>
+        <a href="#" class="inline-block border-b-[0.5px] border-black text-[0.75rem] font-bold uppercase tracking-[0.1rem] pb-[0.25rem] hover:opacity-50 transition-opacity">Get Directions</a>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="w-full bg-[#000000] text-[#FFFFFF] pt-[8rem] pb-[2.5rem] relative overflow-hidden">
+      <div class="max-w-[100rem] mx-auto px-[1.5rem] md:px-[3rem] pb-[5rem] flex flex-col md:flex-row justify-between items-start md:items-end gap-[4rem] reveal-on-scroll">
+        <div class="w-full md:w-auto">
+          <h4 class="text-[2.5rem] md:text-[4rem] font-black uppercase tracking-[-0.15rem] leading-[1] mb-[2rem]">Subscribe<br/>to the edit.</h4>
+          <div class="flex items-center border-b-[0.5px] border-white/30 pb-[0.5rem] w-full md:w-[25rem]">
+            <input type="email" placeholder="EMAIL ADDRESS" class="bg-transparent border-none outline-none text-[0.75rem] uppercase font-bold tracking-[0.1rem] w-full text-white placeholder:text-white/30" />
+            <button class="text-[0.75rem] font-bold uppercase tracking-[0.1rem] hover:text-[#9CA3AF] transition-colors">Submit</button>
+          </div>
+        </div>
+        <div class="max-w-[18rem]">
+          <p class="text-[0.875rem] text-[#9CA3AF] leading-relaxed font-medium">
+            Operating in the world's most silent spaces. Curated architectural isolation for the discerning traveler.
+          </p>
+        </div>
+      </div>
+      <div class="border-t-[0.5px] border-white/10 w-full">
+        <div class="max-w-[100rem] mx-auto px-[1.5rem] md:px-[3rem] py-[5rem]">
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-[4rem] md:gap-[2rem] reveal-on-scroll" data-delay="0.1s">
+            <div class="space-y-[1.5rem]">
+              <h5 class="text-[0.625rem] font-bold tracking-[0.2rem] uppercase text-[#FFFFFF]/40">Destinations</h5>
+              <div class="flex flex-col gap-[1rem]"><a href="#" class="text-[0.75rem] font-bold uppercase tracking-[0.05rem] text-[#FFFFFF]/80 hover:text-white transition-colors">Europe</a><a href="#" class="text-[0.75rem] font-bold uppercase tracking-[0.05rem] text-[#FFFFFF]/80 hover:text-white transition-colors">Asia</a><a href="#" class="text-[0.75rem] font-bold uppercase tracking-[0.05rem] text-[#FFFFFF]/80 hover:text-white transition-colors">Americas</a></div>
+            </div>
+            <div class="space-y-[1.5rem]">
+              <h5 class="text-[0.625rem] font-bold tracking-[0.2rem] uppercase text-[#FFFFFF]/40">Editorial</h5>
+              <div class="flex flex-col gap-[1rem]"><a href="#" class="text-[0.75rem] font-bold uppercase tracking-[0.05rem] text-[#FFFFFF]/80 hover:text-white transition-colors">The Journal</a><a href="#" class="text-[0.75rem] font-bold uppercase tracking-[0.05rem] text-[#FFFFFF]/80 hover:text-white transition-colors">Architecture</a><a href="#" class="text-[0.75rem] font-bold uppercase tracking-[0.05rem] text-[#FFFFFF]/80 hover:text-white transition-colors">Interviews</a><a href="#" class="text-[0.75rem] font-bold uppercase tracking-[0.05rem] text-[#FFFFFF]/80 hover:text-white transition-colors">Archives</a></div>
+            </div>
+            <div class="space-y-[1.5rem]">
+              <h5 class="text-[0.625rem] font-bold tracking-[0.2rem] uppercase text-[#FFFFFF]/40">Corporate</h5>
+              <div class="flex flex-col gap-[1rem]"><a href="#" class="text-[0.75rem] font-bold uppercase tracking-[0.05rem] text-[#FFFFFF]/80 hover:text-white transition-colors">About Us</a><a href="#" class="text-[0.75rem] font-bold uppercase tracking-[0.05rem] text-[#FFFFFF]/80 hover:text-white transition-colors">Press</a><a href="#" class="text-[0.75rem] font-bold uppercase tracking-[0.05rem] text-[#FFFFFF]/80 hover:text-white transition-colors">Careers</a><a href="#" class="text-[0.75rem] font-bold uppercase tracking-[0.05rem] text-[#FFFFFF]/80 hover:text-white transition-colors">Contact</a></div>
+            </div>
+            <div class="space-y-[1.5rem]">
+              <h5 class="text-[0.625rem] font-bold tracking-[0.2rem] uppercase text-[#FFFFFF]/40">Global HQ</h5>
+              <div class="flex flex-col gap-[1rem]"><span class="text-[0.75rem] font-bold uppercase tracking-[0.05rem] text-[#FFFFFF]/80 hover:text-white transition-colors cursor-default">London, UK</span><span class="text-[0.75rem] font-bold uppercase tracking-[0.05rem] text-[#FFFFFF]/80 hover:text-white transition-colors cursor-default">Geneva, CH</span><span class="text-[0.75rem] font-bold uppercase tracking-[0.05rem] text-[#FFFFFF]/80 hover:text-white transition-colors cursor-default">Kyoto, JP</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="border-t-[0.5px] border-white/10 w-full pt-[4rem] relative">
+        <div class="max-w-[100rem] mx-auto px-[1.5rem] md:px-[3rem] w-full">
+          <div class="w-full flex justify-center pb-[6rem] md:pb-[8rem] reveal-on-scroll" data-delay="0.2s">
+             <h2 class="font-serif text-[4rem] sm:text-[7rem] md:text-[10rem] lg:text-[13.5rem] leading-[0.85] text-[#FFFFFF]/5 tracking-tighter select-none flex flex-col items-center">
+               <span>VOGUE</span><span class="ml-[1em] md:ml-[2em] italic text-[#FFFFFF]/10">ESTATES</span>
+             </h2>
+          </div>
+          <div class="w-full flex flex-col md:flex-row justify-between items-center gap-[1.5rem] absolute bottom-[1.5rem] md:bottom-[2.5rem] left-0 px-[1.5rem] md:px-[3rem] max-w-[100rem] right-0 mx-auto">
+            <span class="text-[0.625rem] font-bold tracking-[0.1rem] uppercase text-[#FFFFFF]/30">&copy; 2026 Vogue Estates. All Rights Reserved.</span>
+            <div class="flex gap-[2rem]"><a href="#" class="text-[0.625rem] font-bold tracking-[0.1rem] uppercase text-[#FFFFFF]/30 hover:text-white transition-colors">Terms of Service</a><a href="#" class="text-[0.625rem] font-bold tracking-[0.1rem] uppercase text-[#FFFFFF]/30 hover:text-white transition-colors">Privacy Policy</a></div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- SHARP RECTANGULAR FLOATING NAV BLOCK -->
+    <div class="fixed bottom-0 md:bottom-[2rem] left-0 w-full flex justify-center pointer-events-none z-[100]">
+      <div class="pointer-events-auto flex items-stretch bg-[#FFFFFF] border-[0.5px] border-black/10 shadow-2xl reveal-on-scroll w-full md:w-auto" data-delay="0.5s">
+        <button class="pill-btn bg-[#000000] text-[#FFFFFF] flex-1 md:flex-none px-[2rem] py-[1.25rem] rounded-none text-[0.65rem] font-bold tracking-[0.15rem] uppercase transition-all duration-300">Hotels</button>
+        <button class="pill-btn bg-transparent text-[#000000] flex-1 md:flex-none px-[2rem] py-[1.25rem] rounded-none text-[0.65rem] font-bold tracking-[0.15rem] uppercase transition-all duration-300 hover:bg-black/5">Places</button>
+        <button id="open-search-btn" class="bg-transparent text-[#000000] px-[2rem] py-[1.25rem] border-l-[0.5px] border-black/10 hover:bg-black/5 transition-colors flex items-center justify-center">
+          <span class="text-[0.65rem] font-bold tracking-[0.15rem] uppercase mr-[0.75rem] hidden md:block">Search</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+        </button>
+      </div>
+    </div>
+  </main>
+
+  <!-- MENU MODAL (No Img Tags) -->
+  <div id="menu-modal" class="fixed inset-0 z-[250] bg-[#FFFFFF] text-[#111111] flex flex-col opacity-0 pointer-events-none transition-all duration-[1s] backdrop-blur-sm">
+    <div class="max-w-[100rem] mx-auto w-full h-full relative">
+      <button id="close-menu-btn" class="absolute top-[2rem] right-[1.5rem] md:top-[3rem] md:right-[3rem] flex items-center gap-[1rem] group cursor-pointer z-[260]">
+        <span class="text-[0.75rem] font-bold uppercase text-[#111111] group-hover:opacity-60 transition-opacity">Close</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="group-hover:opacity-60 transition-opacity"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+      <div class="flex flex-col md:flex-row h-full w-full">
+         <div class="w-full md:w-[60%] h-full flex flex-col justify-center px-[1.5rem] md:pl-[8rem] py-[4rem]">
+            <nav class="space-y-[1.5rem] md:space-y-[2.5rem]">
+               <a href="index.html" class="group block"><span class="text-[0.65rem] font-bold uppercase tracking-[0.2rem] block mb-[0.5rem] opacity-30">01</span><span class="font-serif text-[2.5rem] md:text-[5rem] leading-none italic group-hover:translate-x-[1.5rem] transition-transform duration-500 block">The Collection</span></a>
+               <a href="#" class="group block"><span class="text-[0.65rem] font-bold uppercase tracking-[0.2rem] block mb-[0.5rem] opacity-30">02</span><span class="font-serif text-[2.5rem] md:text-[5rem] leading-none italic group-hover:translate-x-[1.5rem] transition-transform duration-500 block">Our Ethos</span></a>
+               <a href="#" class="group block"><span class="text-[0.65rem] font-bold uppercase tracking-[0.2rem] block mb-[0.5rem] opacity-30">03</span><span class="font-serif text-[2.5rem] md:text-[5rem] leading-none italic group-hover:translate-x-[1.5rem] transition-transform duration-500 block">The Journal</span></a>
+            </nav>
+         </div>
+         <div class="hidden md:flex w-[40%] h-full bg-[#FAFAFA] border-l-[0.0625rem] border-black/5 items-center justify-center p-[4rem] relative overflow-hidden">
+            <div class="asset-wrapper absolute inset-0 w-full h-full" alt="Menu Backdrop">
+              <div class="asset-overflow absolute inset-0 w-full h-full overflow-hidden bg-cover bg-center opacity-10 mix-blend-multiply" alt="Menu Backdrop" style="background-image: url('assets/hotel_3.webp');"></div>
+            </div>
+            <div class="relative z-10 text-center">
+               <span class="text-[0.65rem] font-bold uppercase tracking-[0.3rem] block mb-[1.5rem]">Currently Viewing</span>
+               <h4 class="font-serif text-[2.5rem] italic leading-tight mb-[2rem]">Swiss Alps<br/>Retreat</h4>
+            </div>
+         </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const revealElements = document.querySelectorAll('.reveal-on-scroll');
+      revealElements.forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = el.dataset.revealType === 'scale' ? 'scale(1.05)' : 'translateY(2.5rem)';
+        el.style.transition = 'opacity 1.2s cubic-bezier(0.19, 1, 0.22, 1), transform 1.2s cubic-bezier(0.19, 1, 0.22, 1)';
+        if (el.dataset.delay) el.style.transitionDelay = el.dataset.delay;
+      });
+      const triggerReveal = (el) => {
+        el.style.opacity = '1';
+        el.style.transform = el.dataset.revealType === 'scale' ? 'scale(1)' : 'translateY(0)';
+        el.classList.remove('reveal-on-scroll');
+      };
+      if ('IntersectionObserver' in window) {
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+          entries.forEach(entry => { if (entry.isIntersecting) { triggerReveal(entry.target); observer.unobserve(entry.target); } });
+        }, { root: null, rootMargin: '0px', threshold: 0.05 });
+        revealElements.forEach(el => revealObserver.observe(el));
+      }
+      const mMod = document.getElementById('menu-modal');
+      const mOpenBtn = document.getElementById('open-menu-btn');
+      const mCloseBtn = document.getElementById('close-menu-btn');
+      if(mOpenBtn && mMod && mCloseBtn) {
+        mOpenBtn.onclick = () => { mMod.style.opacity = '1'; mMod.style.pointerEvents = 'auto'; document.body.style.overflow = 'hidden'; };
+        mCloseBtn.onclick = () => { mMod.style.opacity = '0'; mMod.style.pointerEvents = 'none'; document.body.style.overflow = ''; };
+      }
+    });
+  </script>
+</body>
+</html>
