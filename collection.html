@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Catalog | Vogue Estates</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Draggable.min.js"></script>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    
+
+/* VISUAL CSS EDITOR */ 
+
+/* Hero Section */
+.min-h-screen .mx-auto .justify-between .w-full{
+ background-image:url("public/assets/Ethos.svg") !important;
+}
+
+/* Division */
+.min-h-screen .md\:flex-row .md\:flex-row{
+ background-color:#ebe9e4;
+}
+
+/* Division */
+.min-h-screen > .w-full > .mx-auto > .md\:flex-row{
+ padding-right:30px !important;
+ transform:translatex(0px) translatey(0px);
+}
+
+
+/* Division */
+.min-h-screen .w-full .lg\:flex-row{
+ background-color:#ebe9e4;
+}
+
+
+/* Full */
+.lg\:flex-row .justify-between .w-full{
+ background-image:url("public/assets/Ethos.svg") !important;
+}
+
+/* Full */
+.min-h-screen .overflow-hidden > .w-full{
+ background-image:none !important;
+}
+
+
+/* Full */
+.min-h-screen .overflow-hidden > .h-full{
+ background-color:#9ca3af;
+}
+
+.min-h-screen .group .vogue-accordion-inner{
+ padding-top:36px;
+}
+
+.min-h-screen > .overflow-hidden{
+ margin-top:0px;
+}
+
+
+.vogue-accordion-container {
+    width: 100%;
+    border-top: 0.5px solid rgba(0, 0, 0, 0.2);
+}
+
+.vogue-accordion-row {
+    padding-top: 36px !important;
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.2);
+}
+
+.vogue-accordion-button {
+    width: 100%;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-left: -1rem;
+    margin-right: -1rem;
+    transition: background-color 0.5s ease;
+}
+
+.vogue-accordion-button:hover {
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+.vogue-accordion-title {
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    color: #111111;
+}
+
+/* Visual Css Editor Responsive */
+
+@media (max-width:768px){
+
+ /* Division */
+ .min-h-screen > .w-full > .mx-auto > .md\:flex-row{
+  padding-right:0px !important;
+ }
+ 
+}
+
+ /* Full */
+ .self-stretch > .w-full{
+  max-width:100% !important;
+ }
+
+
+
+
+@media (min-width: 768px) {
+    .vogue-accordion-title { font-size: 1.5rem; }
+}
+
+.vogue-accordion-icon {
+    font-size: 1.5rem;
+    font-weight: 300;
+    transition: transform 0.5s ease-in-out;
+}
+
+.vogue-accordion-content {
+    overflow: hidden;
+    max-height: 0;
+    transition: all 0.7s ease-in-out;
+}
+
+.vogue-accordion-inner {
+    padding-bottom: 3rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-left: -1rem;
+    margin-right: -1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+@media (min-width: 768px) {
+    .vogue-accordion-inner { flex-direction: row; }
+}
+
+
+
+.vogue-accordion-text {
+    font-size: 1rem;
+    color: #4B5563;
+    line-height: 1.625;
+    max-width: 40rem;
+}
+
+ /* Division */
+ .min-h-screen .bg-\[\#FAFAFA\] .md\:h-screen{
+  height:100vh;
+ }
+ 
+ /* Full */
+ .lg\:flex-row .self-stretch > .w-full{
+  max-width:100%;
+  height:400px;
+ }
+
+  /* Auto */
+ .min-h-screen .w-full .mx-auto{
+  padding-right:0px;
+  transform:translatex(0px) translatey(0px);
+ }
+ 
+ /* Self stretch */
+ .min-h-screen .w-full .self-stretch{
+  padding-left:32px;
+ }
+ 
+ /* Justify between */
+ .min-h-screen .overflow-hidden .justify-between{
+  padding-right:24px;
+ }
+
+  /* Items center */
+ .min-h-screen .overflow-hidden .items-center{
+  padding-right:24px;
+ }
+
+
+
+.vogue-accordion-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15rem;
+    color: #111111;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+
+
+    /* ABSOLUTE SCALING ENGINE - 3 TIER SYSTEM */
+    :root, html { font-size: 16px; scroll-behavior: smooth; }
+    @media (min-width: 768px) and (max-width: 1600px) { :root, html { font-size: 1vw !important; } }
+    @media (min-width: 1601px) { :root, html { font-size: 16px !important; } }
+    @media (max-width: 767px) { :root, html { font-size: 16px !important; } }
+
+    /* Editorial UI Helpers */
+    .vertical-rl { writing-mode: vertical-rl; }
+    .hide-scrollbar::-webkit-scrollbar { display: none; }
+    .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+    /* Topographic Patterns */
+    .vogue-topographic-grid {
+      background-image: url("data:image/svg+xml,%3Csvg width='800' height='800' viewBox='0 0 800 800' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23000' stroke-width='0.75' opacity='0.05'%3E%3Cpath d='M-100,100 C 100,150 200,50 400,100 C 600,150 700,50 900,100' /%3E%3Cpath d='M-100,200 C 150,250 250,150 400,200 C 550,250 650,150 900,200' /%3E%3Cpath d='M-100,300 C 100,350 300,250 400,300 C 500,350 700,250 900,300' /%3E%3Cpath d='M-100,400 C 200,450 200,350 400,400 C 600,450 600,350 900,400' /%3E%3Cpath d='M-100,500 C 150,550 250,450 400,500 C 550,550 650,450 900,500' /%3E%3Cpath d='M-100,600 C 100,650 300,550 400,600 C 500,650 700,550 900,600' /%3E%3Cpath d='M-100,700 C 200,750 200,650 400,700 C 600,750 600,650 900,700' /%3E%3Cpath d='M-100,800 C 150,850 250,750 400,800 C 550,850 650,750 900,800' /%3E%3Cpath d='M100,-100 C 150,100 50,300 100,500 C 150,700 50,800 100,900' /%3E%3Cpath d='M300,-100 C 350,100 250,300 300,500 C 350,700 250,800 300,900' /%3E%3Cpath d='M500,-100 C 550,100 450,300 500,500 C 550,700 450,800 500,900' /%3E%3Cpath d='M700,-100 C 750,100 650,300 700,500 C 750,700 650,800 700,900' /%3E%3C/g%3E%3C/svg%3E");
+      background-size: 800px 800px;
+      background-repeat: repeat;
+    }
+
+    .vogue-ethos-pattern {
+      background-image: url("data:image/svg+xml,%3Csvg width='800' height='800' viewBox='0 0 800 800' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23000' stroke-width='0.75'%3E%3Cpath d='M 0,0 C 200,10 300,-30 400,0 C 500,30 600,-10 800,0' /%3E%3Cpath d='M 0,100 C 200,120 300,60 400,90 C 500,120 600,80 800,100' /%3E%3Cpath d='M 0,200 C 200,240 300,160 400,210 C 500,260 600,160 800,200' /%3E%3Cpath d='M 0,300 C 200,280 300,350 400,320 C 500,290 600,320 800,300' /%3E%3Cpath d='M 0,400 C 200,430 300,380 400,390 C 500,400 600,370 800,400' /%3E%3Cpath d='M 0,500 C 200,560 300,480 400,520 C 500,560 600,440 800,500' /%3E%3Cpath d='M 0,600 C 200,580 300,630 400,610 C 500,590 600,620 800,600' /%3E%3Cpath d='M 0,700 C 200,740 300,650 400,720 C 500,790 600,660 800,700' /%3E%3C/g%3E%3C/svg%3E");
+      background-size: 800px 800px;
+      background-repeat: repeat;
+    }
+  </style>
+</head>
+<body class="bg-[#FAFAFA] text-[#000000] font-sans antialiased selection:bg-[#000000] selection:text-[#FFFFFF] m-0 p-0 overflow-x-hidden">
+
+  <main class="w-full min-h-screen flex flex-col relative bg-[#F9F8F6]">
+    
+    <!-- HEADER (Top Compartment Blueprint) -->
+    <header class="w-full bg-[#F9F8F6] z-[150] relative">
+      <div class="max-w-[100rem] mx-auto px-[1.5rem] md:px-[3rem]">
+        <div class="h-[5rem] md:h-[7rem] flex justify-between items-center px-[1.5rem] md:px-[2rem] reveal-on-scroll">
+          
+          <!-- Globe + Logo -->
+          <div class="flex items-start gap-[1rem] md:gap-[1.5rem]">
+            <svg class="mt-[0.125rem]" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="2" y1="12" x2="22" y2="12"></line>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            </svg>
+            <a href="index.html" class="text-[0.875rem] font-black tracking-[-0.05rem] uppercase cursor-pointer text-[#000000] hover:opacity-70 transition-opacity leading-[1.1]">
+              Vogue<br/>Estates
+            </a>
+          </div>
+          
+          <!-- Staggered Architectural Menu Icon -->
+          <button id="open-menu-btn" class="flex items-center gap-[1rem] hover:opacity-70 transition-opacity text-[#000000] group">
+            <span class="text-[0.75rem] font-bold tracking-[0.1rem] uppercase hidden sm:block">Menu</span>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="transition-transform duration-300 group-hover:translate-x-1">
+              <line x1="4" y1="9" x2="20" y2="9"></line>
+              <line x1="4" y1="15" x2="14" y2="15"></line>
+            </svg>
+          </button>
+          
+        </div>
+      </div>
+    </header>
+
+    <!-- STRICT EDITORIAL INDEX (Blueprint Grid) -->
+    <section class="w-full bg-[#F9F8F6]">
+      <div class="max-w-[100rem] mx-auto pr-[1.5rem] md:pr-[3rem] pl-0">
+        
+        <!-- The Mathematical Grid boundaries -->
+        <div class="flex flex-col md:flex-row min-h-[50vh] md:min-h-[65vh]">
+          
+          <!-- Center/Right Compartment: The Canvas (Asymmetric Layout) -->
+          <div class="w-full flex flex-col md:flex-row bg-transparent relative items-start">
+            
+            <!-- Left: Massive Typographic Statement -->
+            <div class="w-full md:w-[70%] relative flex flex-col justify-between overflow-visible z-20">
+              <!-- Tactile Topographic Background -->
+              <div class="absolute inset-0 w-full h-full pointer-events-none z-0" 
+                   style="background-image: url(&quot;data:image/svg+xml,%3Csvg width='800' height='800' viewBox='0 0 800 800' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23000' stroke-width='0.75' opacity='0.05'%3E%3Cpath d='M-100,100 C 100,150 200,50 400,100 C 600,150 700,50 900,100' /%3E%3Cpath d='M-100,200 C 150,250 250,150 400,200 C 550,250 650,150 900,200' /%3E%3Cpath d='M-100,300 C 100,350 300,250 400,300 C 500,350 700,250 900,300' /%3E%3Cpath d='M-100,400 C 200,450 200,350 400,400 C 600,450 600,350 900,400' /%3E%3Cpath d='M-100,500 C 150,550 250,450 400,500 C 550,550 650,450 900,500' /%3E%3Cpath d='M-100,600 C 100,650 300,550 400,600 C 500,650 700,550 900,600' /%3E%3Cpath d='M-100,700 C 200,750 200,650 400,700 C 600,750 600,650 900,700' /%3E%3Cpath d='M-100,800 C 150,850 250,750 400,800 C 550,850 650,750 900,800' /%3E%3Cpath d='M100,-100 C 150,100 50,300 100,500 C 150,700 50,800 100,900' /%3E%3Cpath d='M300,-100 C 350,100 250,300 300,500 C 350,700 250,800 300,900' /%3E%3Cpath d='M500,-100 C 550,100 450,300 500,500 C 550,700 450,800 500,900' /%3E%3Cpath d='M700,-100 C 750,100 650,300 700,500 C 750,700 650,800 700,900' /%3E%3C/g%3E%3C/svg%3E&quot;); background-size: 800px 800px; background-repeat: repeat;">
+              </div>
+
+              <!-- Bleeding Typographic Block -->
+              <div class="p-[2rem] md:p-[4rem] relative z-20 reveal-on-scroll" data-delay="0.1s">
+                <div class="mb-[3rem] md:mb-[5rem]">
+                  <span class="text-[0.65rem] font-bold uppercase tracking-[0.3rem] text-black block mb-[0.5rem]">Vol. I</span>
+                  <span class="text-[0.65rem] font-bold uppercase tracking-[0.1rem] text-black/40 block">Edition 2026</span>
+                </div>
+                <h1 class="font-sans text-[4.5rem] sm:text-[6.5rem] md:text-[13rem] font-black uppercase leading-[0.75] tracking-[-0.04em] text-[#111111] -ml-[0.05em]">
+                  <span class="block text-[#9CA3AF] opacity-20">The</span>
+                  <span class="block relative z-30">Catalog.</span>
+                </h1>
+                
+                <!-- Desktop Narrative (Moved under title for staggered flow) -->
+                <div class="mt-[4rem] hidden md:block max-w-[24rem] reveal-on-scroll" data-delay="0.4s">
+                   <p class="text-[0.875rem] leading-relaxed text-[#9CA3AF] font-medium border-l-[1px] border-black/10 pl-[2rem]">
+                    A global portfolio of architectural landmarks and sanctuary retreats. Each property is selected for its unique dialogue between landscape and structure.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Mobile Narrative Fallback -->
+              <div class="w-full bg-[#F9F8F6] p-[2rem] md:p-[3rem] relative z-10 block md:hidden reveal-on-scroll" data-delay="0.2s">
+                <p class="text-[0.875rem] md:text-[1rem] leading-relaxed text-[#9CA3AF] font-medium max-w-[30rem]">
+                  A global portfolio of architectural landmarks and sanctuary retreats. Each property is selected for its unique dialogue between landscape and structure.
+                </p>
+              </div>
+            </div>
+
+            <!-- Right: The "Void" & Small Anchor Image -->
+            <div class="w-full md:w-[30%] relative self-stretch flex flex-col justify-center items-end pr-[2rem] md:pr-[4rem] py-[4rem] z-10">
+              
+              <!-- Tension Image Card -->
+              <div class="w-full aspect-[3/4] max-w-[20rem] relative bg-[#EBE9E4] group overflow-visible reveal-on-scroll" data-delay="0.3s">
+                <div class="asset-wrapper absolute inset-0 w-full h-full relative" alt="Structural Anchor">
+                  <div class="asset-overflow absolute inset-0 w-full h-full overflow-hidden bg-cover bg-center grayscale mix-blend-multiply opacity-60 group-hover:scale-105 transition-transform duration-[2s] ease-out" alt="Structural Anchor" style="background-image: url('assets/hotel_1.webp');"></div>
+                </div>
+                
+                <!-- Floating Edition Tag -->
+                <div class="absolute top-[-1rem] right-[-1rem] bg-black text-white p-[1rem] text-[0.65rem] font-bold uppercase tracking-[0.2rem] z-20 hidden md:block">
+                  No. 0182
+                </div>
+              </div>
+
+              <!-- Ornamental Grid Detail in the void -->
+              <div class="mt-[4rem] opacity-10 hidden md:block">
+                <svg width="100" height="100" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="0.5">
+                  <line x1="0" y1="50" x2="100" y2="50"></line>
+                  <line x1="50" y1="0" x2="50" y2="100"></line>
+                  <circle cx="50" cy="50" r="2"></circle>
+                </svg>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- INFINITE EDITORIAL CAROUSEL (Horizontal Scroll) -->
+    <section class="w-full py-[8rem] md:py-[12rem] bg-[#F9F8F6] overflow-hidden">
+      
+      <!-- Carousel Editorial Header & Controls -->
+      <div class="max-w-[100rem] mx-auto px-[1.5rem] md:px-[3rem] mb-[4rem] flex justify-between items-end reveal-on-scroll">
+        <div>
+          <span class="text-[0.65rem] font-bold uppercase tracking-[0.3rem] text-black/50 block mb-[1rem]">01 / The Archives</span>
+          <h2 class="font-serif text-[2.5rem] md:text-[3.5rem] leading-[1.1] text-[#111111]">Curated Sanctuaries.</h2>
+        </div>
+        <div class="hidden md:flex gap-[1rem]">
+          <button id="prev-btn" class="w-[3.5rem] h-[3.5rem] border-[0.5px] border-black/20 flex items-center justify-center text-[#9CA3AF] hover:bg-black hover:text-white hover:border-black transition-colors cursor-pointer">&larr;</button>
+          <button id="next-btn" class="w-[3.5rem] h-[3.5rem] border-[0.5px] border-black/20 flex items-center justify-center text-[#9CA3AF] hover:bg-black hover:text-white hover:border-black transition-colors cursor-pointer">&rarr;</button>
+        </div>
+      </div>
+
+      <div class="gallery-wrapper cursor-grab active:cursor-grabbing">
+        <!-- Full-Bleed Scrolling Track (Updated Padding & Snap Anchors) -->
+        <div id="editorial-track" class="w-full flex overflow-visible pl-[1.5rem] md:pl-[3rem] gap-[2rem] md:gap-[3rem] pb-[4rem]">
+        
+        <!-- Property 01 -->
+        <div class="carousel-card min-w-[85vw] md:min-w-[50vw] lg:min-w-[40vw] shrink-0 snap-start group cursor-pointer relative transform-gpu origin-center">
+          <a href="hotel-detail.html" class="block">
+            <div class="relative w-full aspect-[4/3] md:aspect-[4/5] lg:aspect-[4/3] bg-[#EBE9E4] overflow-hidden border-[0.5px] border-black/5 mb-[1.5rem]" alt="Swiss Alps Retreat">
+              
+              <!-- Image A (Default Exterior) -->
+              <div class="asset-wrapper absolute inset-0 w-full h-full transition-all duration-[1.2s] group-hover:opacity-0 group-hover:scale-105 z-0" alt="Swiss Alps Retreat Exterior">
+                <div class="asset-overflow absolute inset-0 w-full h-full overflow-hidden bg-cover bg-center" alt="Swiss Alps Retreat Exterior" style="background-image: url('assets/hotel_1.webp');"></div>
+              </div>
+              
+              <!-- Image B (Hover Interior/Detail) -->
+              <div class="asset-wrapper absolute inset-0 w-full h-full transition-all duration-[1.2s] opacity-0 scale-110 group-hover:opacity-100 group-hover:scale-100 z-0" alt="Swiss Alps Retreat Interior">
+                <div class="asset-overflow absolute inset-0 w-full h-full overflow-hidden bg-cover bg-center" alt="Swiss Alps Retreat Interior" style="background-image: url('assets/hero_thumb_1.webp');"></div>
+              </div>
+              
+              <!-- Hover Gradient for Pills Legibility -->
+              <div class="absolute inset-x-0 top-0 h-[40%] bg-gradient-to-b from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-[1s] pointer-events-none z-10"></div>
+              
+              <!-- Animated Floating Pills -->
+              <div class="absolute top-[1.5rem] left-[1.5rem] flex flex-wrap gap-[0.5rem] z-20">
+                <span class="bg-[#111111]/80 backdrop-blur-md px-[0.875rem] py-[0.375rem] text-[0.6rem] font-bold uppercase tracking-[0.15rem] text-white opacity-0 -translate-y-[10px] group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-[0.8s] ease-out delay-[0ms] border-[0.5px] border-white/20">Vals</span>
+                <span class="bg-[#111111]/80 backdrop-blur-md px-[0.875rem] py-[0.375rem] text-[0.6rem] font-bold uppercase tracking-[0.15rem] text-white opacity-0 -translate-y-[10px] group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-[0.8s] ease-out delay-[75ms] border-[0.5px] border-white/20">Sauna</span>
+                <span class="bg-[#111111]/80 backdrop-blur-md px-[0.875rem] py-[0.375rem] text-[0.6rem] font-bold uppercase tracking-[0.15rem] text-white opacity-0 -translate-y-[10px] group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-[0.8s] ease-out delay-[150ms] border-[0.5px] border-white/20">2 Guests</span>
+              </div>
+            </div>
+            
+            <!-- Minimalist Typography -->
+            <div class="flex justify-between items-start">
+              <h3 class="font-serif text-[1.75rem] md:text-[2.25rem] font-black uppercase leading-[1] text-[#111111] group-hover:italic transition-all duration-500">Swiss Alps</h3>
+              <span class="text-[0.875rem] font-medium text-[#4B5563] mt-[0.25rem] group-hover:text-black transition-colors">From €1,200</span>
+            </div>
+          </a>
+        </div>
+
+        <!-- Property 02 -->
+        <div class="carousel-card min-w-[85vw] md:min-w-[50vw] lg:min-w-[40vw] shrink-0 snap-start group cursor-pointer relative transform-gpu origin-center">
+          <a href="#" class="block">
+            <div class="relative w-full aspect-[4/3] md:aspect-[4/5] lg:aspect-[4/3] bg-[#EBE9E4] overflow-hidden border-[0.5px] border-black/5 mb-[1.5rem]" alt="Coastal Sanctuary">
+              
+              <div class="asset-wrapper absolute inset-0 w-full h-full transition-all duration-[1.2s] group-hover:opacity-0 group-hover:scale-105 z-0" alt="Coastal Exterior">
+                <div class="asset-overflow absolute inset-0 w-full h-full overflow-hidden bg-cover bg-center" alt="Coastal Exterior" style="background-image: url('assets/hotel_2.webp');"></div>
+              </div>
+              
+              <div class="asset-wrapper absolute inset-0 w-full h-full transition-all duration-[1.2s] opacity-0 scale-110 group-hover:opacity-100 group-hover:scale-100 z-0" alt="Coastal Interior">
+                <div class="asset-overflow absolute inset-0 w-full h-full overflow-hidden bg-cover bg-center" alt="Coastal Interior" style="background-image: url('assets/hero_thumb_2.webp');"></div>
+              </div>
+              
+              <div class="absolute inset-x-0 top-0 h-[40%] bg-gradient-to-b from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-[1s] pointer-events-none z-10"></div>
+              
+              <div class="absolute top-[1.5rem] left-[1.5rem] flex flex-wrap gap-[0.5rem] z-20">
+                <span class="bg-[#111111]/80 backdrop-blur-md px-[0.875rem] py-[0.375rem] text-[0.6rem] font-bold uppercase tracking-[0.15rem] text-white opacity-0 -translate-y-[10px] group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-[0.8s] ease-out delay-[0ms] border-[0.5px] border-white/20">Greece</span>
+                <span class="bg-[#111111]/80 backdrop-blur-md px-[0.875rem] py-[0.375rem] text-[0.6rem] font-bold uppercase tracking-[0.15rem] text-white opacity-0 -translate-y-[10px] group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-[0.8s] ease-out delay-[75ms] border-[0.5px] border-white/20">Aegean Sea</span>
+                <span class="bg-[#111111]/80 backdrop-blur-md px-[0.875rem] py-[0.375rem] text-[0.6rem] font-bold uppercase tracking-[0.15rem] text-white opacity-0 -translate-y-[10px] group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-[0.8s] ease-out delay-[150ms] border-[0.5px] border-white/20">4 Guests</span>
+              </div>
+            </div>
+            
+            <div class="flex justify-between items-start">
+              <h3 class="font-serif text-[1.75rem] md:text-[2.25rem] font-black uppercase leading-[1] text-[#111111] group-hover:italic transition-all duration-500">Coastal</h3>
+              <span class="text-[0.875rem] font-medium text-[#4B5563] mt-[0.25rem] group-hover:text-black transition-colors">From €850</span>
+            </div>
+          </a>
+        </div>
+
+        <!-- Property 03 -->
+        <div class="carousel-card min-w-[85vw] md:min-w-[50vw] lg:min-w-[40vw] shrink-0 snap-start group cursor-pointer relative transform-gpu origin-center">
+          <a href="#" class="block">
+            <div class="relative w-full aspect-[4/3] md:aspect-[4/5] lg:aspect-[4/3] bg-[#EBE9E4] overflow-hidden border-[0.5px] border-black/5 mb-[1.5rem]" alt="Desert Mirage">
+              
+              <div class="asset-wrapper absolute inset-0 w-full h-full transition-all duration-[1.2s] group-hover:opacity-0 group-hover:scale-105 z-0" alt="Desert Exterior">
+                <div class="asset-overflow absolute inset-0 w-full h-full overflow-hidden bg-cover bg-center" alt="Desert Exterior" style="background-image: url('assets/hotel_3.webp');"></div>
+              </div>
+              
+              <div class="asset-wrapper absolute inset-0 w-full h-full transition-all duration-[1.2s] opacity-0 scale-110 group-hover:opacity-100 group-hover:scale-100 z-0" alt="Desert Interior">
+                <div class="asset-overflow absolute inset-0 w-full h-full overflow-hidden bg-cover bg-center" alt="Desert Interior" style="background-image: url('assets/hero_thumb_3.webp');"></div>
+              </div>
+              
+              <div class="absolute inset-x-0 top-0 h-[40%] bg-gradient-to-b from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-[1s] pointer-events-none z-10"></div>
+              
+              <div class="absolute top-[1.5rem] left-[1.5rem] flex flex-wrap gap-[0.5rem] z-20">
+                <span class="bg-[#111111]/80 backdrop-blur-md px-[0.875rem] py-[0.375rem] text-[0.6rem] font-bold uppercase tracking-[0.15rem] text-white opacity-0 -translate-y-[10px] group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-[0.8s] ease-out delay-[0ms] border-[0.5px] border-white/20">Morocco</span>
+                <span class="bg-[#111111]/80 backdrop-blur-md px-[0.875rem] py-[0.375rem] text-[0.6rem] font-bold uppercase tracking-[0.15rem] text-white opacity-0 -translate-y-[10px] group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-[0.8s] ease-out delay-[75ms] border-[0.5px] border-white/20">Dunes</span>
+                <span class="bg-[#111111]/80 backdrop-blur-md px-[0.875rem] py-[0.375rem] text-[0.6rem] font-bold uppercase tracking-[0.15rem] text-white opacity-0 -translate-y-[10px] group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-[0.8s] ease-out delay-[150ms] border-[0.5px] border-white/20">2 Guests</span>
+              </div>
+            </div>
+            
+            <div class="flex justify-between items-start">
+              <h3 class="font-serif text-[1.75rem] md:text-[2.25rem] font-black uppercase leading-[1] text-[#111111] group-hover:italic transition-all duration-500">Mirage</h3>
+              <span class="text-[0.875rem] font-medium text-[#4B5563] mt-[0.25rem] group-hover:text-black transition-colors">From €1,050</span>
+            </div>
+          </a>
+        </div>
+
+        <!-- Property 04 -->
+        <div class="carousel-card min-w-[85vw] md:min-w-[50vw] lg:min-w-[40vw] shrink-0 snap-start group cursor-pointer relative transform-gpu origin-center">
+          <a href="#" class="block">
+            <div class="relative w-full aspect-[4/3] md:aspect-[4/5] lg:aspect-[4/3] bg-[#EBE9E4] overflow-hidden border-[0.5px] border-black/5 mb-[1.5rem]" alt="Urban Monolith">
+              
+              <div class="asset-wrapper absolute inset-0 w-full h-full transition-all duration-[1.2s] group-hover:opacity-0 group-hover:scale-105 z-0" alt="Urban Exterior">
+                <div class="asset-overflow absolute inset-0 w-full h-full overflow-hidden bg-cover bg-center grayscale mix-blend-multiply opacity-80" alt="Urban Exterior" style="background-image: url('assets/hotel_4.webp');"></div>
+              </div>
+              
+              <div class="asset-wrapper absolute inset-0 w-full h-full transition-all duration-[1.2s] opacity-0 scale-110 group-hover:opacity-100 group-hover:scale-100 z-0" alt="Urban Interior">
+                <div class="asset-overflow absolute inset-0 w-full h-full overflow-hidden bg-cover bg-center grayscale mix-blend-multiply opacity-80" alt="Urban Interior" style="background-image: url('assets/hero_thumb_4.webp');"></div>
+              </div>
+              
+              <div class="absolute inset-x-0 top-0 h-[40%] bg-gradient-to-b from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-[1s] pointer-events-none z-10"></div>
+              
+              <div class="absolute top-[1.5rem] left-[1.5rem] flex flex-wrap gap-[0.5rem] z-20">
+                <span class="bg-[#111111]/80 backdrop-blur-md px-[0.875rem] py-[0.375rem] text-[0.6rem] font-bold uppercase tracking-[0.15rem] text-white opacity-0 -translate-y-[10px] group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-[0.8s] ease-out delay-[0ms] border-[0.5px] border-white/20">Japan</span>
+                <span class="bg-[#111111]/80 backdrop-blur-md px-[0.875rem] py-[0.375rem] text-[0.6rem] font-bold uppercase tracking-[0.15rem] text-white opacity-0 -translate-y-[10px] group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-[0.8s] ease-out delay-[75ms] border-[0.5px] border-white/20">Metropolis</span>
+              </div>
+            </div>
+            
+            <div class="flex justify-between items-start">
+              <h3 class="font-serif text-[1.75rem] md:text-[2.25rem] font-black uppercase leading-[1] text-[#111111] group-hover:italic transition-all duration-500">Monolith</h3>
+              <span class="text-[0.65rem] font-bold uppercase tracking-[0.2rem] text-[#111111] bg-black/5 px-3 py-1 mt-[0.25rem]">Coming 2026</span>
+            </div>
+          </a>
+        </div>
+
+        <!-- Terminal Spacer (Allows the final Monolith card to reach the focal point) -->
+        <div class="min-w-[50vw] lg:min-w-[60vw] shrink-0 pointer-events-none"></div>
+      </div>
+    </section>
+
+    <!-- ARCHITECTURAL PULL-QUOTE SLIDER -->
+    <section class="w-full py-[8rem] md:py-[12rem] bg-[#111111] text-white overflow-hidden relative">
+      <!-- Title Header -->
+      <div class="max-w-[100rem] mx-auto px-[1.5rem] md:px-[3rem] mb-[4rem] md:mb-[8rem] flex flex-col md:flex-row md:items-end justify-between gap-[2rem] reveal-on-scroll">
+        <div>
+          <span class="text-[0.65rem] font-bold uppercase tracking-[0.3rem] text-white/40 block mb-[1rem]">02 / Guest Archives</span>
+          <h2 class="font-serif text-[2.5rem] md:text-[3.5rem] leading-[1.1] text-white italic">Words from within.</h2>
+        </div>
+        <div class="hidden md:flex gap-[1rem] shrink-0">
+          <button class="w-[3.5rem] h-[3.5rem] border-[0.5px] border-white/20 flex items-center justify-center text-white/50 hover:bg-white hover:text-black hover:border-white transition-colors cursor-pointer" onclick="document.getElementById('reviews-track').scrollBy({left: -600, behavior: 'smooth'})">&larr;</button>
+          <button class="w-[3.5rem] h-[3.5rem] border-[0.5px] border-white/20 flex items-center justify-center text-white/50 hover:bg-white hover:text-black hover:border-white transition-colors cursor-pointer" onclick="document.getElementById('reviews-track').scrollBy({left: 600, behavior: 'smooth'})">&rarr;</button>
+        </div>
+      </div>
+      
+      <!-- Scrolling Track -->
+      <div id="reviews-track" class="w-full flex overflow-x-auto hide-scrollbar snap-x snap-mandatory pl-[1.5rem] md:pl-[3rem] scroll-pl-[1.5rem] md:scroll-pl-[3rem] gap-[3rem] md:gap-[8rem] pb-[2rem] reveal-on-scroll" data-delay="0.2s">
+        
+        <!-- Review Quote 01 -->
+        <div class="min-w-[85vw] md:min-w-[75vw] lg:min-w-[65vw] shrink-0 snap-start flex flex-col md:flex-row md:items-center justify-between gap-[3rem] md:gap-[6rem]">
+          <div class="flex-1">
+            <h3 class="font-serif italic text-[2rem] md:text-[3.5rem] lg:text-[4.5rem] leading-[1.1] text-white mb-[3rem] md:mb-[5rem]">
+              "Wow, what a beautiful place. Stunning design down to the smallest details – peaceful, yet with a sense of luxury."
+            </h3>
+            <div class="flex items-center gap-[1.5rem] text-[0.65rem] font-bold uppercase tracking-[0.2rem]">
+              <span class="text-white/50">Arjen — Spring</span>
+              <span class="w-[2rem] h-[0.0625rem] bg-white/20"></span>
+              <span class="text-white">Swiss Alps</span>
+            </div>
+          </div>
+          <!-- Architectural Anchor -->
+          <div class="w-full md:w-[15rem] lg:w-[18rem] aspect-[3/4] shrink-0 hidden md:block">
+            <div class="asset-wrapper w-full h-full relative p-[0.5rem] border-[0.5px] border-white/10" alt="Swiss Alps Detail">
+              <div class="asset-overflow w-full h-full overflow-hidden relative bg-cover bg-center grayscale mix-blend-screen opacity-50" alt="Swiss Alps Detail" style="background-image: url('assets/hero_thumb_1.webp');"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review Quote 02 -->
+        <div class="min-w-[85vw] md:min-w-[75vw] lg:min-w-[65vw] shrink-0 snap-start flex flex-col md:flex-row md:items-center justify-between gap-[3rem] md:gap-[6rem]">
+          <div class="flex-1">
+            <h3 class="font-serif italic text-[2rem] md:text-[3.5rem] lg:text-[4.5rem] leading-[1.1] text-white mb-[3rem] md:mb-[5rem]">
+              "A fantastic location to unwind. Hotel-level comfort thanks to the presence of minimalist spatial planning."
+            </h3>
+            <div class="flex items-center gap-[1.5rem] text-[0.65rem] font-bold uppercase tracking-[0.2rem]">
+              <span class="text-white/50">Kathryn — Winter</span>
+              <span class="w-[2rem] h-[0.0625rem] bg-white/20"></span>
+              <span class="text-white">Coastal</span>
+            </div>
+          </div>
+          <div class="w-full md:w-[15rem] lg:w-[18rem] aspect-[3/4] shrink-0 hidden md:block">
+            <div class="asset-wrapper w-full h-full relative p-[0.5rem] border-[0.5px] border-white/10" alt="Coastal Sanctuary Detail">
+              <div class="asset-overflow w-full h-full overflow-hidden relative bg-cover bg-center grayscale mix-blend-screen opacity-50" alt="Coastal Sanctuary Detail" style="background-image: url('assets/hero_thumb_2.webp');"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review Quote 03 -->
+        <div class="min-w-[85vw] md:min-w-[75vw] lg:min-w-[65vw] shrink-0 snap-start flex flex-col md:flex-row md:items-center justify-between gap-[3rem] md:gap-[6rem]">
+          <div class="flex-1">
+            <h3 class="font-serif italic text-[2rem] md:text-[3.5rem] lg:text-[4.5rem] leading-[1.1] text-white mb-[3rem] md:mb-[5rem]">
+              "A room with a view. Right in the middle of absolute silence and equipped with modern architectural comforts."
+            </h3>
+            <div class="flex items-center gap-[1.5rem] text-[0.65rem] font-bold uppercase tracking-[0.2rem]">
+              <span class="text-white/50">Tineke — Autumn</span>
+              <span class="w-[2rem] h-[0.0625rem] bg-white/20"></span>
+              <span class="text-white">Mirage</span>
+            </div>
+          </div>
+          <div class="w-full md:w-[15rem] lg:w-[18rem] aspect-[3/4] shrink-0 hidden md:block">
+            <div class="asset-wrapper w-full h-full relative p-[0.5rem] border-[0.5px] border-white/10" alt="Mirage Detail">
+              <div class="asset-overflow w-full h-full overflow-hidden relative bg-cover bg-center grayscale mix-blend-screen opacity-50" alt="Mirage Detail" style="background-image: url('assets/hero_thumb_3.webp');"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review Quote 04 -->
+        <div class="min-w-[85vw] md:min-w-[75vw] lg:min-w-[65vw] shrink-0 snap-start flex flex-col md:flex-row md:items-center justify-between gap-[3rem] md:gap-[6rem]">
+          <div class="flex-1">
+            <h3 class="font-serif italic text-[2rem] md:text-[3.5rem] lg:text-[4.5rem] leading-[1.1] text-white mb-[3rem] md:mb-[5rem]">
+              "If you love being surrounded by nature but also want luxury, the architectural dialogue is breathtaking."
+            </h3>
+            <div class="flex items-center gap-[1.5rem] text-[0.65rem] font-bold uppercase tracking-[0.2rem]">
+              <span class="text-white/50">Ellen — Autumn</span>
+              <span class="w-[2rem] h-[0.0625rem] bg-white/20"></span>
+              <span class="text-white">Swiss Alps</span>
+            </div>
+          </div>
+          <div class="w-full md:w-[15rem] lg:w-[18rem] aspect-[3/4] shrink-0 hidden md:block">
+            <div class="asset-wrapper w-full h-full relative p-[0.5rem] border-[0.5px] border-white/10" alt="Swiss Alps Detail 2">
+              <div class="asset-overflow w-full h-full overflow-hidden relative bg-cover bg-center grayscale mix-blend-screen opacity-50" alt="Swiss Alps Detail 2" style="background-image: url('assets/hotel_1.webp');"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Terminal Spacer to allow the final review to reach the left edge -->
+        <div class="min-w-[10vw] lg:min-w-[20vw] shrink-0 pointer-events-none"></div>
+      </div>
+    </section>
+
+    <!-- CONTEXT & CLIMATE (Sticky Scroll Narrative) -->
+    <section class="w-full relative flex flex-col md:flex-row bg-[#FAFAFA] border-t-[0.5px] border-black/10">
+      <!-- Sticky Image Half -->
+      <div class="w-full md:w-1/2 h-[60vh] md:h-screen md:sticky top-0 z-10 p-[1.5rem] md:p-[3rem] flex items-center justify-center">
+        <div class="w-full h-full relative asset-wrapper" alt="Context and Climate Narrative">
+          <div class="asset-overflow absolute inset-0 w-full h-full overflow-hidden bg-cover bg-center grayscale mix-blend-multiply opacity-90" alt="Context and Climate Narrative" style="background-image: url('assets/hotel_2.webp');"></div>
+        </div>
+      </div>
+      
+      <!-- Scrolling Text Half -->
+      <div class="w-full md:w-1/2 flex flex-col px-[1.5rem] md:px-[6rem] py-[6rem] md:py-[12rem] z-20">
+        <div class="mb-[8rem] reveal-on-scroll">
+          <span class="text-[0.65rem] font-bold uppercase tracking-[0.3rem] text-black/50 block mb-[1.5rem]">03 / Philosophy</span>
+          <h2 class="font-serif text-[2.5rem] md:text-[4rem] leading-[1.1] text-[#111111] italic">Designing for<br/>Isolation.</h2>
+        </div>
+
+        <div class="space-y-[6rem] md:space-y-[10rem]">
+          <div class="reveal-on-scroll" data-delay="0.1s">
+            <h3 class="text-[0.875rem] font-bold uppercase tracking-[0.2rem] mb-[2rem] flex items-center gap-[1rem]"><span class="w-[1.5rem] h-[0.0625rem] bg-black"></span> The Environment</h3>
+            <p class="text-[1.125rem] md:text-[1.5rem] leading-relaxed text-[#4B5563] font-medium">Every sanctuary in the collection is positioned at the intersection of raw nature and absolute silence. We seek out landscapes that command respect, forcing the architecture to yield to the topography rather than conquer it.</p>
+          </div>
+          
+          <div class="reveal-on-scroll" data-delay="0.1s">
+            <h3 class="text-[0.875rem] font-bold uppercase tracking-[0.2rem] mb-[2rem] flex items-center gap-[1rem]"><span class="w-[1.5rem] h-[0.0625rem] bg-black"></span> The Materials</h3>
+            <p class="text-[1.125rem] md:text-[1.5rem] leading-relaxed text-[#4B5563] font-medium">Constructed from locally sourced elements—rammed earth, Valser quartzite, charred timber—the structures are designed to weather and age, developing a patina that eventually camouflages them completely into their surroundings.</p>
+          </div>
+
+          <div class="reveal-on-scroll" data-delay="0.1s">
+            <h3 class="text-[0.875rem] font-bold uppercase tracking-[0.2rem] mb-[2rem] flex items-center gap-[1rem]"><span class="w-[1.5rem] h-[0.0625rem] bg-black"></span> The Climate</h3>
+            <p class="text-[1.125rem] md:text-[1.5rem] leading-relaxed text-[#4B5563] font-medium">Thermal mass and passive ventilation replace artificial climate control wherever possible. The architecture acts as a thermal battery, storing daytime heat and releasing it during the alpine night.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GLOBAL SERVICES (Blueprint Accordion) -->
+    <section class="w-full py-[8rem] md:py-[12rem] bg-white border-t-[0.5px] border-black/10">
+      <div class="max-w-[100rem] mx-auto px-[1.5rem] md:px-[3rem]">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-[4rem] mb-[6rem] reveal-on-scroll">
+          <div>
+            <span class="text-[0.65rem] font-bold uppercase tracking-[0.3rem] text-black/50 block mb-[1rem]">04 / Amenities</span>
+            <h2 class="font-serif text-[2.5rem] md:text-[4rem] leading-[1.1] text-[#111111]">Global Services.</h2>
+          </div>
+          <p class="text-[0.875rem] text-[#6B7280] font-medium max-w-[20rem]">A standardized protocol of luxury services available across all properties in the Vanguard collection.</p>
+        </div>
+
+        <div class="vogue-accordion-container reveal-on-scroll" data-delay="0.2s">
+          
+          <!-- Accordion Item 1 -->
+          <div class="vogue-accordion-row group">
+            <button class="vogue-accordion-button accordion-btn">
+              <span class="vogue-accordion-title">Thermal Baths & Spa</span>
+              <span class="vogue-accordion-icon accordion-icon">+</span>
+            </button>
+            <div class="vogue-accordion-content accordion-content">
+              <div class="vogue-accordion-inner">
+                <p class="vogue-accordion-text">Rooted in Roman bathing traditions, each property features a subterranean thermal circuit. Variable temperature pools, steam rooms carved from raw stone, and acoustic damping ensure absolute physiological recovery.</p>
+                <ul class="vogue-accordion-list">
+                  <li>01 / 40°C Caldarium</li>
+                  <li>02 / 15°C Frigidarium</li>
+                  <li>03 / Dry Stone Sauna</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Accordion Item 2 -->
+          <div class="vogue-accordion-row group">
+            <button class="vogue-accordion-button accordion-btn">
+              <span class="vogue-accordion-title">Private Gastronomy</span>
+              <span class="vogue-accordion-icon accordion-icon">+</span>
+            </button>
+            <div class="vogue-accordion-content accordion-content">
+              <div class="vogue-accordion-inner">
+                <p class="vogue-accordion-text">A dedicated culinary artisan is assigned to your sanctuary. Menus are strictly localized, relying entirely on ingredients foraged or farmed within a 50-kilometer radius of the property to reflect the immediate terroir.</p>
+                <ul class="vogue-accordion-list">
+                  <li>01 / Hyper-Local Sourcing</li>
+                <li>02 / Sommelier Pairings</li>
+                  <li>03 / 24HR Availability</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Accordion Item 3 -->
+          <div class="vogue-accordion-row group">
+            <button class="vogue-accordion-button accordion-btn">
+              <span class="vogue-accordion-title">Discretion Protocols</span>
+              <span class="vogue-accordion-icon accordion-icon">+</span>
+            </button>
+            <div class="vogue-accordion-content accordion-content">
+              <div class="vogue-accordion-inner">
+                <p class="vogue-accordion-text">Total operational invisibility. Staff presence is mathematically choreographed to ensure you never encounter maintenance or service personnel unless explicitly requested via the secure analog intercom.</p>
+                <ul class="vogue-accordion-list">
+                  <li>01 / Invisible Service</li>
+                  <li>02 / Encrypted Comms</li>
+                  <li>03 / Airspace Perimeter</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ARCHIVE / FOOTER CTA -->
+    <section class="w-full mt-[6rem] py-[10rem] border-t-[0.5px] border-black/10 relative overflow-hidden bg-[#F9F8F6]">
+      <!-- Inline Topographic SVG Background (Ethos Pattern) -->
+      <div class="absolute inset-0 w-full h-full opacity-10 pointer-events-none" style="background-image: url(&quot;data:image/svg+xml,%3Csvg width='800' height='800' viewBox='0 0 800 800' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23000' stroke-width='0.75'%3E%3Cpath d='M 0,0 C 200,10 300,-30 400,0 C 500,30 600,-10 800,0' /%3E%3Cpath d='M 0,100 C 200,120 300,60 400,90 C 500,120 600,80 800,100' /%3E%3Cpath d='M 0,200 C 200,240 300,160 400,210 C 500,260 600,160 800,200' /%3E%3Cpath d='M 0,300 C 200,280 300,350 400,320 C 500,290 600,320 800,300' /%3E%3Cpath d='M 0,400 C 200,430 300,380 400,390 C 500,400 600,370 800,400' /%3E%3Cpath d='M 0,500 C 200,560 300,480 400,520 C 500,560 600,440 800,500' /%3E%3Cpath d='M 0,600 C 200,580 300,630 400,610 C 500,590 600,620 800,600' /%3E%3Cpath d='M 0,700 C 200,740 300,650 400,720 C 500,790 600,660 800,700' /%3E%3C/g%3E%3C/svg%3E&quot;); background-size: 800px 800px; background-repeat: repeat;"></div>
+      
+      <div class="max-w-[100rem] mx-auto px-[1.5rem] md:px-[3rem] flex flex-col items-center relative z-10">
+        <h2 class="font-serif text-[2rem] md:text-[3.5rem] leading-[1.1] italic text-center mb-[4rem] max-w-[40rem] reveal-on-scroll">
+          The collection is a living archive.<br/>New locations are added seasonally.
+        </h2>
+        <a href="#" class="px-[3rem] py-[1.25rem] bg-white border-[0.5px] border-black text-[#111111] rounded-none text-[0.75rem] font-bold uppercase tracking-[0.2rem] hover:bg-black hover:text-white transition-all duration-500 reveal-on-scroll cursor-pointer" data-delay="0.2s">
+          View All Archives
+        </a>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="w-full bg-[#000000] text-[#FFFFFF] pt-[8rem] pb-[2.5rem] relative overflow-hidden">
+      <div class="max-w-[100rem] mx-auto px-[1.5rem] md:px-[3rem] pb-[5rem] flex flex-col md:flex-row justify-between items-start md:items-end gap-[4rem] reveal-on-scroll">
+        <div class="w-full md:w-auto">
+          <h4 class="text-[2.5rem] md:text-[4rem] font-black uppercase tracking-[-0.15rem] leading-[1] mb-[2rem]">Subscribe<br/>to the edit.</h4>
+          <div class="flex items-center border-b-[0.0625rem] border-white/30 pb-[0.5rem] w-full md:w-[25rem]">
+            <input type="email" id="newsletter-email" placeholder="EMAIL ADDRESS" class="bg-transparent border-none outline-none text-[0.75rem] uppercase font-bold tracking-[0.1rem] w-full text-white placeholder:text-white/30" />
+            <button id="newsletter-submit" class="text-[0.75rem] font-bold uppercase tracking-[0.1rem] hover:text-[#9CA3AF] transition-colors">Submit</button>
+          </div>
+        </div>
+        <div class="max-w-[18rem]">
+          <p class="text-[0.875rem] text-[#9CA3AF] leading-relaxed font-medium">
+            Operating in the world's most silent spaces. Curated architectural isolation for the discerning traveler.
+          </p>
+        </div>
+      </div>
+      <div class="border-t-[0.0625rem] border-white/10 w-full">
+        <div class="max-w-[100rem] mx-auto px-[1.5rem] md:px-[3rem] py-[5rem]">
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-[4rem] md:gap-[2rem] reveal-on-scroll" data-delay="0.1s">
+            <div class="space-y-[1.5rem]">
+              <h5 class="text-[0.625rem] font-bold tracking-[0.2rem] uppercase text-[#FFFFFF]/40">Destinations</h5>
+              <div class="flex flex-col gap-[1rem]"><a href="#" class="text-[0.75rem] font-bold uppercase tracking-[0.05rem] text-[#FFFFFF]/80 hover:text-white transition-colors">Europe</a><a href="#" class="text-[0.75rem] font-bold uppercase tracking-[0.05rem] text-[#FFFFFF]/80 hover:text-white transition-colors">Asia</a><a href="#" class="text-[0.75rem] font-bold uppercase tracking-[0.05rem] text-[#FFFFFF]/80 hover:text-white transition-colors">Americas</a></div>
+            </div>
+            <div class="space-y-[1.5rem]">
+              <h5 class="text-[0.625rem] font-bold tracking-[0.2rem] uppercase text-[#FFFFFF]/40">Editorial</h5>
+              <div class="flex flex-col gap-[1rem]"><a href="#" class="text-[0.75rem] font-bold uppercase tracking-[0.05rem] text-[#FFFFFF]/80 hover:text-white transition-colors">The Journal</a><a href="#" class="text-[0.75rem] font-bold uppercase tracking-[0.05rem] text-[#FFFFFF]/80 hover:text-white transition-colors">Architecture</a><a href="#" class="text-[0.75rem] font-bold uppercase tracking-[0.05rem] text-[#FFFFFF]/80 hover:text-white transition-colors">Interviews</a><a href="#" class="text-[0.75rem] font-bold uppercase tracking-[0.05rem] text-[#FFFFFF]/80 hover:text-white transition-colors">Archives</a></div>
+            </div>
+            <div class="space-y-[1.5rem]">
+              <h5 class="text-[0.625rem] font-bold tracking-[0.2rem] uppercase text-[#FFFFFF]/40">Corporate</h5>
+              <div class="flex flex-col gap-[1rem]"><a href="#" class="text-[0.75rem] font-bold uppercase tracking-[0.05rem] text-[#FFFFFF]/80 hover:text-white transition-colors">About Us</a><a href="#" class="text-[0.75rem] font-bold uppercase tracking-[0.05rem] text-[#FFFFFF]/80 hover:text-white transition-colors">Press</a><a href="#" class="text-[0.75rem] font-bold uppercase tracking-[0.05rem] text-[#FFFFFF]/80 hover:text-white transition-colors">Careers</a><a href="#" class="text-[0.75rem] font-bold uppercase tracking-[0.05rem] text-[#FFFFFF]/80 hover:text-white transition-colors">Contact</a></div>
+            </div>
+            <div class="space-y-[1.5rem]">
+              <h5 class="text-[0.625rem] font-bold tracking-[0.2rem] uppercase text-[#FFFFFF]/40">Global HQ</h5>
+              <div class="flex flex-col gap-[1rem]"><span class="text-[0.75rem] font-bold uppercase tracking-[0.05rem] text-[#FFFFFF]/80 hover:text-white transition-colors cursor-default">London, UK</span><span class="text-[0.75rem] font-bold uppercase tracking-[0.05rem] text-[#FFFFFF]/80 hover:text-white transition-colors cursor-default">Geneva, CH</span><span class="text-[0.75rem] font-bold uppercase tracking-[0.05rem] text-[#FFFFFF]/80 hover:text-white transition-colors cursor-default">Kyoto, JP</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="border-t-[0.0625rem] border-white/10 w-full pt-[4rem] relative">
+        <div class="max-w-[100rem] mx-auto px-[1.5rem] md:px-[3rem] w-full">
+          <div class="w-full flex justify-center pb-[6rem] md:pb-[8rem] reveal-on-scroll" data-delay="0.2s">
+             <h2 class="font-serif text-[4rem] sm:text-[7rem] md:text-[10rem] lg:text-[13.5rem] leading-[0.85] text-[#FFFFFF]/5 tracking-tighter select-none flex flex-col items-center">
+               <span>VOGUE</span><span class="ml-[1em] md:ml-[2em] italic text-[#FFFFFF]/10">ESTATES</span>
+             </h2>
+          </div>
+          <div class="w-full flex flex-col md:flex-row justify-between items-center gap-[1.5rem] absolute bottom-[1.5rem] md:bottom-[2.5rem] left-0 px-[1.5rem] md:px-[3rem] max-w-[100rem] right-0 mx-auto">
+            <span class="text-[0.625rem] font-bold tracking-[0.1rem] uppercase text-[#FFFFFF]/30">&copy; 2026 Vogue Estates. All Rights Reserved.</span>
+            <div class="flex gap-[2rem]"><a href="#" class="text-[0.625rem] font-bold tracking-[0.1rem] uppercase text-[#FFFFFF]/30 hover:text-white transition-colors">Terms of Service</a><a href="#" class="text-[0.625rem] font-bold tracking-[0.1rem] uppercase text-[#FFFFFF]/30 hover:text-white transition-colors">Privacy Policy</a></div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- MENU TAKEOVER (Matching Global Ecosystem) -->
+  <div id="menu-modal" class="fixed inset-0 z-[250] bg-[#F9F8F6] text-[#111111] flex flex-col opacity-0 pointer-events-none transition-all duration-[1s] backdrop-blur-sm">
+    <div class="max-w-[100rem] mx-auto w-full h-full relative">
+      <button id="close-menu-btn" class="absolute top-[2rem] right-[1.5rem] md:top-[3rem] md:right-[3rem] flex items-center gap-[1rem] group cursor-pointer z-[260]">
+        <span class="text-[0.75rem] font-bold uppercase text-[#111111] group-hover:opacity-60 transition-opacity">Close</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="group-hover:opacity-60 transition-opacity"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+      <div class="flex flex-col md:flex-row h-full w-full">
+         <div class="w-full md:w-[60%] h-full flex flex-col justify-center px-[1.5rem] md:pl-[8rem] py-[4rem]">
+            <nav class="space-y-[1.5rem] md:space-y-[2.5rem]">
+               <a href="index.html" class="group block"><span class="text-[0.65rem] font-bold uppercase tracking-[0.2rem] block mb-[0.5rem] opacity-30">01</span><span class="font-serif text-[2.5rem] md:text-[5rem] leading-none italic group-hover:translate-x-[1.5rem] transition-transform duration-500 block">The Collection</span></a>
+               <a href="index.html#ethos" class="group block menu-link"><span class="text-[0.65rem] font-bold uppercase tracking-[0.2rem] block mb-[0.5rem] opacity-30">02</span><span class="font-serif text-[2.5rem] md:text-[5rem] leading-none italic group-hover:translate-x-[1.5rem] transition-transform duration-500 block">Our Ethos</span></a>
+               <a href="index.html#journal" class="group block menu-link"><span class="text-[0.65rem] font-bold uppercase tracking-[0.2rem] block mb-[0.5rem] opacity-30">03</span><span class="font-serif text-[2.5rem] md:text-[5rem] leading-none italic group-hover:translate-x-[1.5rem] transition-transform duration-500 block">The Journal</span></a>
+               <a href="mailto:hq@vogueestates.com" class="group block"><span class="text-[0.65rem] font-bold uppercase tracking-[0.2rem] block mb-[0.5rem] opacity-30">04</span><span class="font-serif text-[2.5rem] md:text-[5rem] leading-none italic group-hover:translate-x-[1.5rem] transition-transform duration-500 block">Contact HQ</span></a>
+            </nav>
+         </div>
+         <div class="hidden md:flex w-[40%] h-full bg-[#F9F8F6] border-l-[0.0625rem] border-black/5 items-center justify-center p-[4rem] relative overflow-hidden">
+            <div class="asset-wrapper absolute inset-0 w-full h-full" alt="Featured Sanctuary"><div class="asset-overflow absolute inset-0 w-full h-full overflow-hidden bg-cover bg-center opacity-10 mix-blend-multiply" alt="Featured Sanctuary" style="background-image: url('assets/hero_2.webp');"></div></div>
+            <div class="relative z-10 text-center"><span class="text-[0.65rem] font-bold uppercase tracking-[0.3rem] block mb-[1.5rem]">Featured Sanctuary</span><h4 class="font-serif text-[2.5rem] italic leading-tight mb-[2rem]">Swiss Alps<br/>Retreat</h4><a href="hotel-detail.html" class="inline-block border-b-[0.0625rem] border-black text-[0.75rem] font-bold uppercase tracking-[0.1rem] pb-1 hover:opacity-50 transition-all">Explore Case Study</a></div>
+         </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    gsap.registerPlugin(ScrollTrigger, Draggable);
+
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Unified Reveal Logic
+      gsap.utils.toArray('.reveal-on-scroll').forEach(el => {
+        const type = el.dataset.revealType;
+        gsap.fromTo(el, 
+          { 
+            opacity: 0, 
+            y: type === 'scale' ? 0 : 40, 
+            scale: type === 'scale' ? 1.05 : 1 
+          },
+          { 
+            opacity: 1, 
+            y: 0, 
+            scale: 1, 
+            duration: 1.2, 
+            ease: 'expo.out', 
+            delay: parseFloat(el.dataset.delay || 0),
+            scrollTrigger: {
+              trigger: el,
+              start: 'top 92%',
+              once: true
+            }
+          }
+        );
+      });
+
+      // 2. Menu Logic
+      const mMod = document.getElementById('menu-modal');
+      const mOpen = document.getElementById('open-menu-btn');
+      const mClose = document.getElementById('close-menu-btn');
+
+      const openModal = (m) => { 
+        if(m) { 
+          gsap.to(m, { opacity: 1, duration: 0.6, ease: 'expo.out' });
+          m.style.pointerEvents = 'auto'; 
+          document.body.style.overflow = 'hidden'; 
+        } 
+      };
+      const closeModal = (m) => { 
+        if(m) { 
+          gsap.to(m, { opacity: 0, duration: 0.6, ease: 'expo.out' });
+          m.style.pointerEvents = 'none'; 
+          document.body.style.overflow = ''; 
+        } 
+      };
+
+      if(mOpen) mOpen.onclick = () => openModal(mMod);
+      if(mClose) mClose.onclick = () => closeModal(mMod);
+
+      document.querySelectorAll('.menu-link').forEach(l => {
+        l.onclick = () => closeModal(mMod);
+      });
+
+      // 3. Newsletter Logic
+      const nEmail = document.getElementById('newsletter-email');
+      const nSubmit = document.getElementById('newsletter-submit');
+      if (nSubmit && nEmail) {
+        nSubmit.onclick = () => {
+          if (nEmail.value.includes('@')) {
+            const original = nSubmit.textContent;
+            nSubmit.textContent = 'THANKS';
+            nEmail.value = '';
+            setTimeout(() => nSubmit.textContent = original, 3000);
+          }
+        };
+      }
+
+      // 4. GSAP Draggable Horizontal Gallery
+      const track = document.getElementById('editorial-track');
+      if (track) {
+        const cards = track.querySelectorAll('.carousel-card');
+        
+        const updateParallax = () => {
+          // Focal point is the left-aligned anchor like the previous manual logic
+          // or we can use the center of the viewport for a more dynamic feel.
+          const focalPoint = window.innerWidth * 0.3; 
+
+          cards.forEach(card => {
+            const rect = card.getBoundingClientRect();
+            const cardCenter = rect.left + rect.width / 2;
+            const distFromFocus = cardCenter - focalPoint;
+            
+            const gap = window.innerWidth < 768 ? 32 : 48;
+            const cardTotalWidth = (cards[0].offsetWidth || (window.innerWidth * 0.4)) + gap; 
+            let normalizedDist = distFromFocus / cardTotalWidth;
+            
+            let scale = 1 - Math.abs(normalizedDist) * 0.15;
+            scale = Math.max(0.85, Math.min(1, scale));
+            
+            let opacity = 1 - Math.abs(normalizedDist) * 0.7;
+            opacity = Math.max(0.3, Math.min(1, opacity));
+            
+            gsap.set(card, { scale: scale, opacity: opacity });
+
+            const overflows = card.querySelectorAll('.asset-overflow');
+            const shift = -(normalizedDist * 40);
+            overflows.forEach(bg => {
+              gsap.set(bg, { x: shift, scale: 1.15 });
+            });
+          });
+        };
+
+        const getBounds = () => {
+          return {
+            minX: -(track.scrollWidth - window.innerWidth + (window.innerWidth < 768 ? 24 : 48)),
+            maxX: 0
+          };
+        };
+
+        Draggable.create(track, {
+          type: "x",
+          bounds: getBounds(),
+          edgeResistance: 0.65,
+          dragResistance: 0.1,
+          inertia: true, // Note: Requires InertiaPlugin, falls back to basic if not present
+          onDrag: updateParallax,
+          onThrowUpdate: updateParallax, // If inertia is active
+          onDragStart: () => {
+            track.style.userSelect = 'none';
+          },
+          onDragEnd: () => {
+             track.style.userSelect = '';
+          }
+        });
+
+        // Initialize state
+        setTimeout(updateParallax, 100);
+
+        // Optional: Nav Buttons
+        const nextBtn = document.getElementById('next-btn');
+        const prevBtn = document.getElementById('prev-btn');
+        if(nextBtn && prevBtn) {
+          const moveWidth = cards[0].offsetWidth + (window.innerWidth < 768 ? 32 : 48);
+          nextBtn.onclick = () => {
+            let currentX = gsap.getProperty(track, "x");
+            gsap.to(track, { x: Math.max(getBounds().minX, currentX - moveWidth), duration: 0.8, ease: "expo.out", onUpdate: updateParallax });
+          };
+          prevBtn.onclick = () => {
+            let currentX = gsap.getProperty(track, "x");
+            gsap.to(track, { x: Math.min(0, currentX + moveWidth), duration: 0.8, ease: "expo.out", onUpdate: updateParallax });
+          };
+        }
+
+        window.addEventListener('resize', () => {
+          Draggable.get(track).applyBounds(getBounds());
+          updateParallax();
+        });
+      }
+
+      // 5. Accordion Logic
+      const accordionBtns = document.querySelectorAll('.accordion-btn');
+      accordionBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const content = btn.nextElementSibling;
+          const icon = btn.querySelector('.accordion-icon');
+          
+          accordionBtns.forEach(otherBtn => {
+            if (otherBtn !== btn) {
+              gsap.to(otherBtn.nextElementSibling, { maxHeight: 0, duration: 0.5, ease: 'expo.out' });
+              gsap.to(otherBtn.querySelector('.accordion-icon'), { rotation: 0, duration: 0.5, ease: 'expo.out' });
+            }
+          });
+
+          if (content.style.maxHeight && content.style.maxHeight !== '0px') {
+            gsap.to(content, { maxHeight: 0, duration: 0.5, ease: 'expo.out' });
+            gsap.to(icon, { rotation: 0, duration: 0.5, ease: 'expo.out' });
+          } else {
+            gsap.to(content, { maxHeight: content.scrollHeight, duration: 0.5, ease: 'expo.out' });
+            gsap.to(icon, { rotation: 45, duration: 0.5, ease: 'expo.out' });
+          }
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>

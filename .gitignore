@@ -1,0 +1,19 @@
+node_modules/
+dist/
+.vscode/
+*.webm
+Backups/
+*.jpg
+
+# Ignore assets by default
+*.webp
+*.mp4
+*.svg
+
+# But allow them in public/assets
+!public/assets/*.webp
+!public/assets/*.mp4
+!public/assets/*.svg
+!public/assets/*.png
+!public/assets/*.jpg
+!public/assets/*.gif
